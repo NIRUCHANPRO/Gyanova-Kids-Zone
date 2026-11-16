@@ -1,5 +1,42 @@
 {
-  "lastUpdated": "2026-11-16",
+  "lastUpdated": "2026-11-16T15:29:45.729Z",
   "schoolNotice": "📢 Welcome to Gyanova Heights School! Create your Student PIN Profile & start earning XP!",
-  "players": []
+  "homeworkList": [
+    {
+      "grade": "Junior Wing (Nursery – Class 2)",
+      "task": "Complete 2 Waves in Spelling Jungle Phonics & create 1 Pixel Art in Magic Canvas."
+    },
+    {
+      "grade": "Middle Wing (Class 3 – Class 5)",
+      "task": "Solve BODMAS & Multiplication Waves in Math Wizard + 1 Sliding Puzzle in Brain Teasers."
+    },
+    {
+      "grade": "Senior Wing (Class 6 – Class 8)",
+      "task": "Master Algebra Equations (ax + b = c) in Math Wizard, Science GK Trivia & Meteor Typing!"
+    }
+  ],
+  "players": [
+    {
+      "id": "stu_1794842724392_760",
+      "name": "Nirwan Sharma",
+      "classGrade": "Class 8",
+      "avatar": "🐼",
+      "pin": "2009",
+      "stars": 15,
+      "xp": 35,
+      "questWave": 1,
+      "questProgress": 1,
+      "ownedItems": [],
+      "equippedTitle": "🌱 GYANOVA SCHOLAR",
+      "equippedFrame": "",
+      "gameLevels": {
+        "canvas": 2,
+        "math": 1,
+        "spelling": 1,
+        "brain": 1,
+        "story": 1,
+        "typing": 1
+      }
+    }
+  ]
 }
