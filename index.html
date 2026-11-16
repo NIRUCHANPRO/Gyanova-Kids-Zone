@@ -2784,6 +2784,144 @@
       if (btn) btn.textContent = appState.soundOn ? '🔊 Sound: ON' : '🔇 Sound: OFF';
       renderDashboardUI();
     });
+        /* ==============================================================
+       GITHUB AS A BACKEND — CLOUD SYNC ENGINE (data.json)
+       ============================================================== */
+    const GH_CONFIG_KEY = 'gyanova_github_backend_cfg';
+
+    function getGhConfig() {
+      try {
+        return JSON.parse(localStorage.getItem(GH_CONFIG_KEY)) || { owner: '', repo: '', branch: 'main', token: '' };
+      } catch (e) {
+        return { owner: '', repo: '', branch: 'main', token: '' };
+      }
+    }
+
+    // 1. Website khulte hi data.json se latest Leaderboard load karega
+    async function fetchCloudLeaderboard() {
+      try {
+        const res = await fetch('./data.json?t=' + Date.now());
+        if (!res.ok) return;
+        const cloudData = await res.json();
+        if (cloudData && Array.isArray(cloudData.players)) {
+          appState.players = cloudData.players;
+          saveAppState();
+          renderDashboardUI();
+        }
+      } catch (e) {}
+    }
+
+    // 2. Teacher ya Student ka score seedha GitHub repo ke data.json mein save karega
+    async function pushToGitHubBackend() {
+      const cfg = getGhConfig();
+      if (!cfg.owner || !cfg.repo || !cfg.token) {
+        openGitHubSetupModal();
+        return;
+      }
+      showTrophyToast('☁️ Syncing Leaderboard to GitHub Backend...');
+      const apiUrl = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/data.json`;
+      try {
+        // Get current file SHA
+        const getRes = await fetch(apiUrl + `?ref=${cfg.branch}`, {
+          headers: { 'Authorization': `Bearer ${cfg.token}`, 'Accept': 'application/vnd.github+json' }
+        });
+        let sha = undefined;
+        if (getRes.ok) {
+          const fileInfo = await getRes.json();
+          sha = fileInfo.sha;
+        }
+
+        const payloadObj = {
+          lastUpdated: new Date().toISOString(),
+          questsCompleted: appState.questsCompleted,
+          questsTotal: appState.questsTotal,
+          players: appState.players
+        };
+        const base64Content = btoa(unescape(encodeURIComponent(JSON.stringify(payloadObj, null, 2))));
+
+        const putRes = await fetch(apiUrl, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `Bearer ${cfg.token}`,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: 'Update Gyanova Kids Zone Leaderboard data.json',
+            content: base64Content,
+            sha: sha,
+            branch: cfg.branch
+          })
+        });
+
+        if (putRes.ok) {
+          playTone('win');
+          showTrophyToast('✅ Saved to GitHub Backend! Live on all devices!');
+        } else {
+          showTrophyToast('⚠️ GitHub Sync Failed: Check Repo Name or Token!');
+        }
+      } catch (err) {
+        showTrophyToast('⚠️ Network Error while syncing to GitHub!');
+      }
+    }
+
+    function openGitHubSetupModal() {
+      const cfg = getGhConfig();
+      const modal = document.getElementById('mainModal');
+      modal.classList.add('active');
+      document.getElementById('modalTitle').innerHTML = '☁️ GITHUB BACKEND SETUP — Cloud Database';
+      document.getElementById('modalBody').innerHTML = `
+        <div style="display:flex; flex-direction:column; gap:14px; max-width:540px; margin:0 auto;">
+          <p style="font-size:14px; font-weight:700; color:#334155;">
+            Apna GitHub Username, Repo Name aur Token yahan dalein. Yeh code mein nahi jayega (safe in browser) aur seedha GitHub ke <strong>data.json</strong> ko update karega:
+          </p>
+          <input id="ghOwner" placeholder="GitHub Username (e.g. nirwansharma)" value="${cfg.owner}" style="padding:10px; border-radius:10px; border:2px solid #94a3b8; font-weight:700;" />
+          <input id="ghRepo" placeholder="Repository Name (e.g. gyanova-kids-zone)" value="${cfg.repo}" style="padding:10px; border-radius:10px; border:2px solid #94a3b8; font-weight:700;" />
+          <input id="ghBranch" placeholder="Branch (default: main)" value="${cfg.branch || 'main'}" style="padding:10px; border-radius:10px; border:2px solid #94a3b8; font-weight:700;" />
+          <input id="ghToken" type="password" placeholder="GitHub Personal Access Token (ghp_...)" value="${cfg.token}" style="padding:10px; border-radius:10px; border:2px solid #94a3b8; font-weight:700;" />
+          <div style="display:flex; gap:10px;">
+            <button onclick="saveGhConfig()" style="flex:1; background:#16a34a; color:#fff; border:none; padding:12px; border-radius:12px; font-weight:800; cursor:pointer;">
+              💾 Save & Sync Now
+            </button>
+            <button onclick="fetchCloudLeaderboard(); closeModal();" style="background:#2563eb; color:#fff; border:none; padding:12px 18px; border-radius:12px; font-weight:800; cursor:pointer;">
+              🔄 Pull Latest Data
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function saveGhConfig() {
+      const cfg = {
+        owner: document.getElementById('ghOwner').value.trim(),
+        repo: document.getElementById('ghRepo').value.trim(),
+        branch: document.getElementById('ghBranch').value.trim() || 'main',
+        token: document.getElementById('ghToken').value.trim()
+      };
+      localStorage.setItem(GH_CONFIG_KEY, JSON.stringify(cfg));
+      closeModal();
+      pushToGitHubBackend();
+    }
+
+    // Add "Cloud Sync" button automatically to the top School Ribbon
+    window.addEventListener('DOMContentLoaded', () => {
+      fetchCloudLeaderboard();
+      const ribbonActions = document.querySelector('.ribbon-actions');
+      if (ribbonActions) {
+        const syncBtn = document.createElement('button');
+        syncBtn.className = 'ribbon-btn';
+        syncBtn.innerHTML = '☁️ Save to GitHub';
+        syncBtn.onclick = pushToGitHubBackend;
+        ribbonActions.prepend(syncBtn);
+
+        const cfgBtn = document.createElement('button');
+        cfgBtn.className = 'ribbon-btn';
+        cfgBtn.innerHTML = '⚙️ Backend Key';
+        cfgBtn.onclick = openGitHubSetupModal;
+        ribbonActions.prepend(cfgBtn);
+      }
+    });
+
   </script>
 </body>
 </html>
