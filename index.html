@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gyanova Heights School | Gyanova Kids Zone</title>
+  <title>Gyanova Heights School (Nursery to Class 8) | Gyanova Kids Zone</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --sky-top: #2ea8ff;
-      --sky-mid: #6bd2ff;
-      --sky-bot: #bdf0ff;
+      --sky-top: #259eff;
+      --sky-mid: #63ceff;
+      --sky-bot: #b9eeff;
       --panel-white: rgba(255, 255, 255, 0.94);
-      --navy-dark: #14183b;
-      --navy-card: #1f2556;
+      --navy-dark: #111636;
+      --navy-card: #1d2352;
       --gold: #ffcf33;
       --gold-dark: #c98a00;
     }
@@ -97,13 +97,13 @@
       100% { transform: rotate(6deg); }
     }
 
-    /* Official School Top Ribbon (Clean & Tamper-Proof for Kids) */
+    /* Official School Top Ribbon (Nursery to Class 8th) */
     .school-ribbon {
       position: relative;
       z-index: 10;
       background: linear-gradient(90deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
       color: #fff;
-      padding: 7px 20px;
+      padding: 7px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -116,16 +116,16 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.3px;
       flex-wrap: wrap;
     }
     .ribbon-badge {
       background: linear-gradient(135deg, #f59e0b, #ef4444);
       padding: 3px 11px;
       border-radius: 999px;
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 800;
       text-transform: uppercase;
       box-shadow: 0 2px 6px rgba(239, 68, 68, 0.4);
@@ -136,24 +136,28 @@
       color: #bae6fd;
       padding: 3px 12px;
       border-radius: 999px;
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 700;
       cursor: pointer;
+      max-width: 420px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .ribbon-actions {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       flex-wrap: wrap;
     }
     .ribbon-btn {
       background: rgba(255, 255, 255, 0.14);
       border: 1.5px solid rgba(255, 255, 255, 0.3);
       color: #fff;
-      padding: 5px 13px;
+      padding: 5px 12px;
       border-radius: 999px;
       font-family: inherit;
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -166,6 +170,16 @@
       color: #0f172a;
       border-color: #fff;
       transform: translateY(-1px);
+    }
+    .ribbon-btn.shop-btn {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      border-color: #fef08a;
+      color: #fff;
+    }
+    .ribbon-btn.cert-btn {
+      background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+      border-color: #ddd6fe;
+      color: #fff;
     }
     .ribbon-btn.admin-lock {
       background: rgba(239, 68, 68, 0.2);
@@ -192,7 +206,7 @@
     /* TOP HEADER: Brand + Floating Islands + Student Account Card */
     .top-header {
       display: grid;
-      grid-template-columns: 335px 1fr 345px;
+      grid-template-columns: 340px 1fr 355px;
       align-items: center;
       gap: 14px;
     }
@@ -284,10 +298,10 @@
     }
     .brand-sub {
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 900;
       color: #0369a1;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.5px;
       margin-top: 2px;
     }
 
@@ -360,7 +374,7 @@
       color: #1e293b;
       padding: 4px 14px;
       border-radius: 999px;
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 800;
       border: 2px solid #38bdf8;
       box-shadow: 0 4px 10px rgba(0,0,0,0.12);
@@ -369,7 +383,7 @@
       z-index: 5;
     }
 
-    /* Top-Right Student Profile Card (PIN-Protected) */
+    /* Top-Right Student Profile Card (With Unlockable Star Shop Frames & Titles) */
     .player-card {
       background: linear-gradient(135deg, #4f86f7 0%, #3b5bdb 100%);
       border-radius: 30px;
@@ -400,6 +414,19 @@
       font-size: 40px;
       flex-shrink: 0;
       position: relative;
+      transition: all 0.3s ease;
+    }
+    .avatar-ring.frame-dragon {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 4px #f59e0b, 0 0 18px #ef4444;
+    }
+    .avatar-ring.frame-cyber {
+      border-color: #06b6d4;
+      box-shadow: 0 0 0 4px #3b82f6, 0 0 18px #22d3ee;
+    }
+    .avatar-ring.frame-galaxy {
+      border-color: #e879f9;
+      box-shadow: 0 0 0 4px #7e22ce, 0 0 20px #c084fc;
     }
     .avatar-badge {
       position: absolute;
@@ -418,8 +445,20 @@
       flex: 1;
       min-width: 0;
     }
+    .player-title-tag {
+      display: inline-block;
+      background: rgba(15, 23, 42, 0.45);
+      color: #fde047;
+      font-size: 10px;
+      font-weight: 900;
+      padding: 1px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(253, 224, 71, 0.5);
+      margin-bottom: 2px;
+      letter-spacing: 0.4px;
+    }
     .player-name-row {
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 900;
       letter-spacing: 0.4px;
       text-shadow: 0 2px 0 rgba(0,0,0,0.35);
@@ -432,16 +471,16 @@
       align-items: center;
       justify-content: space-between;
       gap: 6px;
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 900;
       color: #fde047;
       text-shadow: 0 2px 0 #92400e;
-      margin: 2px 0 5px;
+      margin: 1px 0 4px;
     }
     .level-bar-wrap {
       background: rgba(15, 23, 42, 0.55);
       border-radius: 999px;
-      height: 20px;
+      height: 19px;
       padding: 2px;
       border: 2px solid rgba(255,255,255,0.4);
       position: relative;
@@ -449,7 +488,7 @@
     }
     .level-bar-fill {
       height: 100%;
-      width: 10%;
+      width: 0%;
       background: linear-gradient(90deg, #4ade80 0%, #16a34a 100%);
       border-radius: 999px;
       transition: width 0.4s ease;
@@ -461,7 +500,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 10px;
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 900;
       color: #ffffff;
       text-shadow: 0 1px 2px rgba(0,0,0,0.8);
@@ -471,7 +510,7 @@
     /* MAIN 3-COLUMN GRID */
     .main-dashboard {
       display: grid;
-      grid-template-columns: 255px 1fr 305px;
+      grid-template-columns: 255px 1fr 310px;
       gap: 18px;
       align-items: stretch;
     }
@@ -523,7 +562,7 @@
       border-radius: 999px;
       border: 3px solid rgba(255, 255, 255, 0.85);
       font-family: 'Fredoka', sans-serif;
-      font-size: 16.5px;
+      font-size: 16px;
       font-weight: 700;
       color: #ffffff;
       cursor: pointer;
@@ -551,14 +590,14 @@
       transform: translateY(3px);
     }
     .nav-icon {
-      width: 33px;
-      height: 33px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 19px;
+      font-size: 18px;
       flex-shrink: 0;
       box-shadow: inset 0 2px 4px rgba(0,0,0,0.18);
     }
@@ -576,7 +615,7 @@
       flex-direction: column;
     }
     .center-grid-card {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.82);
       backdrop-filter: blur(8px);
       border-radius: 34px;
       padding: 28px 18px 20px;
@@ -652,9 +691,9 @@
       z-index: 3;
     }
     .tile-badge {
-      background: rgba(15, 23, 42, 0.8);
+      background: rgba(15, 23, 42, 0.82);
       color: #ffffff;
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 800;
       padding: 4px 12px;
       border-radius: 999px;
@@ -667,49 +706,42 @@
       background: linear-gradient(180deg, #ff7eb3 0%, #ec38bc 100%);
       box-shadow: 0 8px 0 #a21caf, 0 12px 20px rgba(162, 28, 175, 0.28);
     }
-    .tile-canvas .tile-preview {
-      background: linear-gradient(180deg, #e0f2fe 0%, #ffffff 100%);
-    }
+    .tile-canvas .tile-preview { background: linear-gradient(180deg, #e0f2fe 0%, #ffffff 100%); }
+
     .tile-math {
       background: linear-gradient(180deg, #38bdf8 0%, #3b82f6 50%, #4338ca 100%);
       box-shadow: 0 8px 0 #1e3a8a, 0 12px 20px rgba(30, 58, 138, 0.28);
     }
-    .tile-math .tile-preview {
-      background: radial-gradient(circle at 50% 40%, #7c3aed 0%, #311068 100%);
-    }
+    .tile-math .tile-preview { background: radial-gradient(circle at 50% 40%, #7c3aed 0%, #311068 100%); }
+
     .tile-spelling {
       background: linear-gradient(180deg, #4ade80 0%, #16a34a 100%);
       box-shadow: 0 8px 0 #14532d, 0 12px 20px rgba(20, 83, 45, 0.28);
     }
-    .tile-spelling .tile-preview {
-      background: linear-gradient(180deg, #bbf7d0 0%, #22c55e 65%, #15803d 100%);
-    }
+    .tile-spelling .tile-preview { background: linear-gradient(180deg, #bbf7d0 0%, #22c55e 65%, #15803d 100%); }
+
     .tile-brain {
       background: linear-gradient(180deg, #34d399 0%, #059669 100%);
       box-shadow: 0 8px 0 #064e3b, 0 12px 20px rgba(6, 78, 59, 0.28);
     }
-    .tile-brain .tile-preview {
-      background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
-    }
+    .tile-brain .tile-preview { background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%); }
+
     .tile-story {
       background: linear-gradient(180deg, #facc15 0%, #ea580c 100%);
       box-shadow: 0 8px 0 #9a3412, 0 12px 20px rgba(154, 52, 18, 0.28);
     }
-    .tile-story .tile-preview {
-      background: linear-gradient(180deg, #38bdf8 0%, #86efac 70%, #15803d 100%);
-    }
+    .tile-story .tile-preview { background: linear-gradient(180deg, #38bdf8 0%, #86efac 70%, #15803d 100%); }
+
     .tile-typing {
       background: linear-gradient(180deg, #c084fc 0%, #7e22ce 100%);
       box-shadow: 0 8px 0 #4c1d95, 0 12px 20px rgba(76, 29, 149, 0.28);
     }
-    .tile-typing .tile-preview {
-      background: radial-gradient(circle at 50% 35%, #581c87 0%, #1e1b4b 100%);
-    }
+    .tile-typing .tile-preview { background: radial-gradient(circle at 50% 35%, #581c87 0%, #1e1b4b 100%); }
 
     /* Mini Visual Graphics inside Game Tiles */
     .canvas-art-demo {
       width: 100%;
-      height: 98px;
+      height: 96px;
       background: #fff;
       border-radius: 12px;
       border: 3px solid #38bdf8;
@@ -725,12 +757,12 @@
       border-radius: 14px;
       padding: 6px 14px;
       font-family: 'Baloo 2', cursive;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 800;
       color: #b45309;
       box-shadow: 0 4px 0 #b45309;
       text-align: center;
-      line-height: 1.1;
+      line-height: 1.15;
       margin-top: 10px;
     }
     .jungle-tiles-demo {
@@ -832,7 +864,7 @@
       box-shadow: 0 2px 0 #94a3b8;
     }
 
-    /* RIGHT SIDEBAR: LEADERBOARD (Read-Only, Tamper-Proof) */
+    /* RIGHT SIDEBAR: LEADERBOARD */
     .right-sidebar-col {
       display: flex;
       flex-direction: column;
@@ -863,10 +895,10 @@
       text-shadow: 0 2px 0 #854d0e;
     }
     .lb-subtitle {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 800;
       color: #94a3b8;
-      letter-spacing: 0.7px;
+      letter-spacing: 0.6px;
     }
 
     .podium-stage {
@@ -903,11 +935,11 @@
       font-size: 28px;
     }
     .podium-name {
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 800;
       margin-bottom: 4px;
       color: #f8fafc;
-      max-width: 82px;
+      max-width: 85px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -970,7 +1002,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transition: background 0.15s ease;
     }
     .lb-row.is-me {
       background: rgba(250, 204, 21, 0.22);
@@ -988,7 +1019,7 @@
       background: #f59e0b;
       color: #1e1b4b;
       font-weight: 900;
-      font-size: 12.5px;
+      font-size: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1014,11 +1045,11 @@
       font-weight: 800;
     }
     .lb-user-sub {
-      font-size: 10.5px;
+      font-size: 10px;
       color: #cbd5e1;
     }
     .lb-score-right {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 900;
       color: #fde047;
       display: flex;
@@ -1107,7 +1138,7 @@
       line-height: 1;
     }
     .trophy-item.locked .trophy-cup {
-      filter: grayscale(1) opacity(0.55);
+      filter: grayscale(1) opacity(0.5);
     }
     .trophy-label {
       font-size: 12px;
@@ -1121,7 +1152,7 @@
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.82);
+      background: rgba(15, 23, 42, 0.84);
       backdrop-filter: blur(7px);
       z-index: 100;
       display: none;
@@ -1135,7 +1166,7 @@
     .modal-window {
       background: #ffffff;
       width: 100%;
-      max-width: 960px;
+      max-width: 980px;
       max-height: 93vh;
       border-radius: 32px;
       border: 5px solid #38bdf8;
@@ -1160,7 +1191,7 @@
     }
     .modal-title {
       font-family: 'Baloo 2', cursive;
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 800;
       display: flex;
       align-items: center;
@@ -1185,7 +1216,7 @@
       background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
     }
 
-    /* Form Controls & Buttons inside Modals */
+    /* Form Controls & Buttons */
     .kid-input, .kid-select {
       width: 100%;
       padding: 11px 14px;
@@ -1205,9 +1236,9 @@
     .btn-3d {
       border: 3px solid #ffffff;
       border-radius: 999px;
-      padding: 10px 22px;
+      padding: 9px 20px;
       font-family: 'Baloo 2', cursive;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 800;
       color: #ffffff;
       cursor: pointer;
@@ -1225,7 +1256,51 @@
     .btn-purple{ background: linear-gradient(180deg, #c084fc, #7e22ce); box-shadow: 0 5px 0 #4c1d95; }
     .btn-red   { background: linear-gradient(180deg, #f87171, #dc2626); box-shadow: 0 5px 0 #7f1d1d; }
 
-    /* Responsive Adjustments */
+    /* Pixel Art 16x16 Grid & Meteor Typing Styles */
+    .pixel-grid-16 {
+      display: grid;
+      grid-template-columns: repeat(16, 22px);
+      grid-template-rows: repeat(16, 22px);
+      gap: 1px;
+      background: #cbd5e1;
+      border: 4px solid #ec4899;
+      border-radius: 12px;
+      padding: 4px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .pixel-cell {
+      width: 22px;
+      height: 22px;
+      background: #ffffff;
+      cursor: pointer;
+    }
+    .meteor-arena {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      height: 300px;
+      background: radial-gradient(circle at 50% 20%, #311068 0%, #090d16 100%);
+      border-radius: 24px;
+      border: 4px solid #a855f7;
+      overflow: hidden;
+      box-shadow: inset 0 0 30px rgba(168, 85, 247, 0.35);
+    }
+    .falling-meteor {
+      position: absolute;
+      background: linear-gradient(135deg, #fde047, #ef4444);
+      color: #0f172a;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 2px solid #fff;
+      font-family: 'Baloo 2', cursive;
+      font-size: 19px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      box-shadow: 0 0 15px rgba(250, 204, 21, 0.8);
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
     @media (max-width: 1120px) {
       .top-header { grid-template-columns: 1fr 1fr; }
       .islands-stage { grid-column: span 2; order: 3; }
@@ -1239,6 +1314,11 @@
     }
     @media (max-width: 520px) {
       .center-grid-card { grid-template-columns: 1fr; }
+      .pixel-grid-16 {
+        grid-template-columns: repeat(16, 17px);
+        grid-template-rows: repeat(16, 17px);
+      }
+      .pixel-cell { width: 17px; height: 17px; }
     }
   </style>
 </head>
@@ -1255,17 +1335,19 @@
     <div class="hanging-star" style="left: 73%; animation-delay: -2.1s;"><div class="string" style="height: 28px;"></div><div class="star-icon">✨</div></div>
   </div>
 
-  <!-- Official Gyanova Heights School Top Ribbon (No Open Teacher/Edit Buttons!) -->
+  <!-- Official Gyanova Heights School Top Ribbon (Nursery to Class 8th) -->
   <header class="school-ribbon">
     <div class="ribbon-left">
-      <span class="ribbon-badge">Nursery to Class 4</span>
+      <span class="ribbon-badge">Nursery to Class 8th</span>
       <span>🏫 <strong>GYANOVA HEIGHTS SCHOOL</strong></span>
-      <span class="notice-ticker" id="topNoticeBanner" onclick="openGameModal('notices')">📢 Tap to view Daily Homework & School Notices!</span>
+      <span class="notice-ticker" id="topNoticeBanner" onclick="openGameModal('notices')">📢 Tap to view Nursery–Class 8th Homework & Notices!</span>
     </div>
     <div class="ribbon-actions">
-      <button class="ribbon-btn" onclick="openGameModal('notices')">📋 Homework & Notices</button>
-      <button class="ribbon-btn" onclick="openGameModal('about')">🏛️ About School</button>
-      <button class="ribbon-btn" onclick="openAuthModal('login')">🔐 Student Login / Register</button>
+      <button class="ribbon-btn shop-btn" onclick="openGameModal('shop')">🛍️ Star Shop</button>
+      <button class="ribbon-btn cert-btn" onclick="openGameModal('certificate')">🎓 Merit Certificate</button>
+      <button class="ribbon-btn" onclick="openGameModal('notices')">📋 Homework</button>
+      <button class="ribbon-btn" onclick="openGameModal('about')">🏛️ Campus</button>
+      <button class="ribbon-btn" onclick="openAuthModal('login')">🔐 Student PIN</button>
       <button class="ribbon-btn" id="soundToggleBtn" onclick="toggleSound()">🔊 Sound: ON</button>
       <button class="ribbon-btn admin-lock" onclick="openAdminPasswordPrompt()" title="Restricted to School Admin">🔒 Admin</button>
       <input type="file" id="logoFileInput" accept="image/*" style="display:none" onchange="handleLogoUpload(event)" />
@@ -1314,13 +1396,13 @@
         <div class="brand-titles">
           <div class="brand-gyanova">GYANOVA</div>
           <div class="brand-kidszone">KIDS ZONE</div>
-          <div class="brand-sub">Gyanova Heights School</div>
+          <div class="brand-sub">Nursery to Class 8th Portal</div>
         </div>
       </div>
 
       <!-- Center Floating Animal Islands -->
       <div class="islands-stage">
-        <div class="speech-bubble" id="mascotSpeech">🌟 Create your Student PIN Profile & start from 0 XP!</div>
+        <div class="speech-bubble" id="mascotSpeech">🌟 Nursery to Class 8th Adaptive Games — Zero Repeat Shuffle Engine!</div>
         <div class="island" onclick="mascotCheer('calf')">
           <div class="island-mascots">🐮</div>
           <div class="island-turf"></div>
@@ -1338,14 +1420,15 @@
         </div>
       </div>
 
-      <!-- Right Player Profile Card (Requires Secret PIN to Login/Switch) -->
-      <div class="player-card" onclick="openGameModal('profile')" title="View My Student Profile or Switch Account with PIN">
-        <div class="avatar-ring">
+      <!-- Right Player Profile Card (PIN-Protected + Star Shop Cosmetics) -->
+      <div class="player-card" onclick="openGameModal('profile')" title="View My Student Profile, Star Shop or Switch Account with PIN">
+        <div class="avatar-ring" id="playerAvatarRing">
           <span id="playerAvatarIcon">👤</span>
           <span class="avatar-badge" id="playerAuthBadge">LOGIN</span>
         </div>
         <div class="player-info">
-          <div class="player-name-row" id="playerNameDisplay">NOT LOGGED IN (TAP HERE)</div>
+          <div class="player-title-tag" id="playerTitleTag">🌱 NEW SCHOLAR</div>
+          <div class="player-name-row" id="playerNameDisplay">CREATE PROFILE / LOGIN</div>
           <div class="player-stars-row">
             <span id="playerStarsDisplay">⭐ 0 Stars</span>
             <span id="playerXpDisplay" style="font-size:13px; color:#bae6fd;">0 XP</span>
@@ -1387,20 +1470,20 @@
           </button>
           <button class="nav-btn nav-coral" onclick="openGameModal('canvas')">
             <span class="nav-icon">🎨</span>
-            <span>Art Canvas</span>
+            <span>Art & Pixel Studio</span>
           </button>
           <button class="nav-btn nav-teal" onclick="openGameModal('story')">
             <span class="nav-icon">📖</span>
             <span>Storyland</span>
           </button>
-          <button class="nav-btn nav-pink" onclick="openGameModal('champions')">
-            <span class="nav-icon">🏆</span>
-            <span>Top Champions</span>
+          <button class="nav-btn nav-pink" onclick="openGameModal('shop')">
+            <span class="nav-icon">🛍️</span>
+            <span>Star Shop & Cert</span>
           </button>
         </div>
       </aside>
 
-      <!-- CENTER GAME & LEARNING GRID (UNLIMITED LEVELS) -->
+      <!-- CENTER GAME & LEARNING GRID (GRADE-ADAPTIVE NURSERY TO CLASS 8) -->
       <section class="center-grid-col">
         <div class="section-pill-wrap">
           <div class="section-pill">CENTER GAME &amp; LEARNING GRID</div>
@@ -1416,9 +1499,9 @@
               <div class="canvas-art-demo">
                 <span style="font-size:26px;">🖌️</span>
                 <span style="font-size:42px;">🦁</span>
-                <span style="font-size:26px;">🌈</span>
+                <span style="font-size:26px;">👾</span>
               </div>
-              <div class="tile-badge">Symmetry, Neon &amp; Art Quests</div>
+              <div class="tile-badge">Mandala + 16x16 Pixel Art</div>
             </div>
           </div>
 
@@ -1430,10 +1513,10 @@
             <div class="tile-preview">
               <span class="tile-lvl-pill" id="lvlBadge_math">LVL 1 • ∞</span>
               <div class="math-board-demo">
-                1 + 2 = 🌟<br/>
-                <span style="font-size:16px; color:#4338ca;">Unlimited Waves!</span>
+                1 + 2 to 3x + 5 = 20<br/>
+                <span style="font-size:14px; color:#4338ca;">Nursery to Class 8th!</span>
               </div>
-              <div class="tile-badge">Infinite Boss &amp; Algebra</div>
+              <div class="tile-badge">Arithmetic, BODMAS &amp; Algebra</div>
             </div>
           </div>
 
@@ -1452,7 +1535,7 @@
                 <div class="letter-tile">T</div>
                 <div class="letter-tile">S</div>
               </div>
-              <div class="tile-badge">120+ Words &amp; Phonics</div>
+              <div class="tile-badge">Live API + Shuffle Bag</div>
             </div>
           </div>
 
@@ -1469,7 +1552,7 @@
                 <div class="pz-piece" style="background:#22c55e;"></div>
                 <div class="pz-piece" style="background:#38bdf8;"></div>
               </div>
-              <div class="tile-badge">Memory, Matrix &amp; Logic</div>
+              <div class="tile-badge">Memory, Slide Puzzle &amp; GK</div>
             </div>
           </div>
 
@@ -1482,7 +1565,7 @@
               <span class="tile-lvl-pill" id="lvlBadge_story">LVL 1 • ∞</span>
               <div class="story-book-demo">
                 <div class="story-page">🐻🌲</div>
-                <div class="story-page" style="border-right:none;">🦊🌈</div>
+                <div class="story-page" style="border-right:none;">🔬🚀</div>
               </div>
               <div class="story-controls-demo">
                 <div class="story-play-pill">🔊</div>
@@ -1499,7 +1582,7 @@
             </div>
             <div class="tile-preview">
               <span class="tile-lvl-pill" id="lvlBadge_typing">LVL 1 • ∞</span>
-              <div style="color:#fde047; font-weight:900; letter-spacing:5px; font-size:15px; margin-top:8px;">T I G Y L N P</div>
+              <div style="color:#fde047; font-weight:900; letter-spacing:5px; font-size:15px; margin-top:8px;">☄️ METEOR WORDS</div>
               <div class="mini-keyboard-demo">
                 <div class="kb-row">
                   <span class="kb-key">Q</span><span class="kb-key">W</span><span class="kb-key">E</span><span class="kb-key">R</span><span class="kb-key">T</span><span class="kb-key">Y</span><span class="kb-key">U</span>
@@ -1508,7 +1591,7 @@
                   <span class="kb-key" style="background:#fde047;">A</span><span class="kb-key">S</span><span class="kb-key">D</span><span class="kb-key">F</span><span class="kb-key">G</span><span class="kb-key">H</span>
                 </div>
               </div>
-              <div class="tile-badge">Arcade Rain &amp; Speed Wave</div>
+              <div class="tile-badge">Keyboard + Meteor Arcade</div>
             </div>
           </div>
         </div>
@@ -1522,13 +1605,13 @@
         <div class="leaderboard-card">
           <div class="lb-header">
             <div class="lb-title">⭐ LEADERBOARD</div>
-            <div class="lb-subtitle">(REAL STUDENT RANKINGS • 0 XP START)</div>
+            <div class="lb-subtitle">(NURSERY TO CLASS 8 • 0 XP START)</div>
           </div>
 
           <!-- Top 3 Podium -->
           <div class="podium-stage" id="podiumStage"></div>
 
-          <!-- Ranked Student List (Read-Only: Cannot hijack accounts!) -->
+          <!-- Ranked Student List -->
           <div class="lb-list" id="leaderboardList"></div>
         </div>
       </aside>
@@ -1595,26 +1678,41 @@
     transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     pointer-events: none;
     white-space: nowrap;
-  ">⭐ Welcome to Gyanova Kids Zone!</div>
+  ">⭐ Welcome to Gyanova Heights School!</div>
 
   <script>
     /* ============================================================================
-       PART 1 JS: CORE STATE, PIN AUTHENTICATION, SECRET 'ghs' ADMIN & GAMES 1-2
+       PART 1 JS: NURSERY–CLASS 8 ENGINE, SHUFFLE BAG, PIN AUTH, ADMIN & GAMES 1–2
        ============================================================================ */
-    const STORAGE_KEY = 'gyanova_kids_secure_v2';
-    const SESSION_PLAYER_KEY = 'gyanova_active_session_v2';
+    const STORAGE_KEY = 'gyanova_kids_n8_v3';
+    const SESSION_PLAYER_KEY = 'gyanova_active_session_n8_v3';
     const LOGO_STORAGE_KEY = 'gyanova_school_custom_logo_v2';
     const GH_CONFIG_KEY = 'gyanova_github_backend_cfg_v2';
     const ADMIN_SECRET_PASS = 'ghs';
 
-    // Clean initial state: ZERO fake students, everyone registers & starts at 0 Stars / 0 XP!
+    const ALL_SCHOOL_CLASSES = [
+      'Nursery', 'LKG', 'UKG',
+      'Class 1', 'Class 2', 'Class 3', 'Class 4',
+      'Class 5', 'Class 6', 'Class 7', 'Class 8'
+    ];
+
+    const STAR_SHOP_ITEMS = [
+      { id: 'title_coder', type: 'title', label: '💻 CYBER CODER', cost: 30, desc: 'Special title badge above your name' },
+      { id: 'title_math',  type: 'title', label: '🧮 MATHS EMPEROR', cost: 45, desc: 'Show everyone your calculation power' },
+      { id: 'title_space', type: 'title', label: '🚀 SPACE SCIENTIST', cost: 60, desc: 'Elite explorer of Gyanova Science' },
+      { id: 'title_legend',type: 'title', label: '👑 GYANOVA LEGEND', cost: 100, desc: 'Highest honor title in Kids Zone' },
+      { id: 'frame_dragon',type: 'frame', label: '🔥 Golden Dragon Ring', css: 'frame-dragon', cost: 40, desc: 'Fiery red-gold glowing avatar border' },
+      { id: 'frame_cyber', type: 'frame', label: '⚡ Cyber Neon Ring', css: 'frame-cyber', cost: 55, desc: 'Electric cyan-blue avatar border' },
+      { id: 'frame_galaxy',type: 'frame', label: '🌌 Galaxy Cosmic Ring', css: 'frame-galaxy', cost: 80, desc: 'Deep purple cosmic aura border' }
+    ];
+
     const defaultPortalState = {
       soundOn: true,
-      schoolNotice: '📢 Welcome to Gyanova Heights School! Complete your Daily Math & Spelling waves to climb the Leaderboard!',
+      schoolNotice: '📢 Welcome to Gyanova Heights School (Nursery to Class 8th)! Create your PIN Profile, earn Stars & unlock Official Merit Certificates!',
       homeworkList: [
-        { grade: 'Nursery & KG', task: 'Practice 5 Phonics words in Spelling Jungle & color 1 picture in Magic Canvas.' },
-        { grade: 'Class 1 & 2', task: 'Reach Level 3 in Math Wizard Addition/Subtraction & read 1 Story World book.' },
-        { grade: 'Class 3 & 4', task: 'Complete 3 Waves in Math Wizard Multiplication & score 90%+ accuracy in Typing Champ.' }
+        { grade: 'Junior Wing (Nursery – Class 2)', task: 'Complete 2 Waves in Spelling Jungle Phonics & create 1 Pixel Art in Magic Canvas.' },
+        { grade: 'Middle Wing (Class 3 – Class 5)', task: 'Solve BODMAS & Multiplication Waves in Math Wizard + 1 Sliding Puzzle in Brain Teasers.' },
+        { grade: 'Senior Wing (Class 6 – Class 8)', task: 'Master Algebra Equations (ax + b = c) in Math Wizard, Science GK Trivia & Meteor Typing!' }
       ],
       players: []
     };
@@ -1624,8 +1722,30 @@
     let adminUnlockedSession = false;
     let activeTimers = [];
 
+    // Non-Repeating Fisher-Yates Shuffle Bags stored in memory per deck key
+    const shuffleBags = {};
+    function getNextFromShuffleBag(bagName, sourceArray) {
+      if (!Array.isArray(sourceArray) || sourceArray.length === 0) return null;
+      if (!shuffleBags[bagName] || shuffleBags[bagName].length === 0) {
+        // Clone and perform Fisher-Yates shuffle
+        constindices = sourceArray.map((_, i) => i);
+        for (let i = constindices.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const temp = constindices[i];
+          constindices[i] = constindices[j];
+          constindices[j] = temp;
+        }
+        shuffleBags[bagName] = constindices;
+      }
+      const nextIndex = shuffleBags[bagName].pop();
+      return sourceArray[nextIndex];
+    }
+
     function clearAllGameTimers() {
-      activeTimers.forEach(t => clearInterval(t));
+      activeTimers.forEach(t => {
+        clearInterval(t);
+        clearTimeout(t);
+      });
       activeTimers = [];
     }
 
@@ -1651,7 +1771,13 @@
       return appState.players.find(p => p.id === currentStudentId) || null;
     }
 
-    // Ensure every student object has full per-game unlimited level stats starting at 0 XP
+    // Determine Student Wing based on Class (Nursery to Class 8)
+    function getStudentWing(classGrade) {
+      if (['Nursery', 'LKG', 'UKG', 'Class 1', 'Class 2'].includes(classGrade)) return 'junior';
+      if (['Class 3', 'Class 4', 'Class 5'].includes(classGrade)) return 'middle';
+      return 'senior'; // Class 6, Class 7, Class 8
+    }
+
     function normalizeStudentObject(stu) {
       if (!stu.gameLevels) {
         stu.gameLevels = { canvas: 1, math: 1, spelling: 1, brain: 1, story: 1, typing: 1 };
@@ -1660,6 +1786,9 @@
       if (typeof stu.xp !== 'number') stu.xp = 0;
       if (typeof stu.questWave !== 'number') stu.questWave = 1;
       if (typeof stu.questProgress !== 'number') stu.questProgress = 0;
+      if (!Array.isArray(stu.ownedItems)) stu.ownedItems = [];
+      if (!stu.equippedTitle) stu.equippedTitle = '🌱 GYANOVA SCHOLAR';
+      if (!stu.equippedFrame) stu.equippedFrame = '';
       return stu;
     }
 
@@ -1711,7 +1840,7 @@
         window.speechSynthesis.cancel();
         const utter = new SpeechSynthesisUtterance(text);
         utter.rate = 0.96;
-        utter.pitch = 1.12;
+        utter.pitch = 1.1;
         window.speechSynthesis.speak(utter);
       } catch (e) {}
     }
@@ -1733,17 +1862,17 @@
       clearTimeout(toastTimer);
       toastTimer = setTimeout(() => {
         el.style.transform = 'translateX(-50%) translateY(140px)';
-      }, 3000);
+      }, 3100);
     }
 
     function mascotCheer(who) {
       playTone('click');
       const stu = getLoggedStudent();
-      const nameStr = stu ? stu.name : 'Champion';
+      const nameStr = stu ? `${stu.name} (${stu.classGrade})` : 'Scholar';
       const lines = {
-        calf: `🐮 Moo ${nameStr}! Every game has Unlimited Levels—keep climbing!`,
-        friends: `🐯🐘🐻 Hey ${nameStr}! Your account is protected by your Secret 4-Digit PIN!`,
-        raccoon: `🦝 Pro Tip: Complete 3 Daily Challenges to level up your Infinite Quest Wave!`
+        calf: `🐮 Moo ${nameStr}! Try the 16x16 Pixel Art Studio in Magic Canvas!`,
+        friends: `🐯🐘🐻 Hey ${nameStr}! Visit the Star Shop to unlock Golden Dragon & Cyber frames!`,
+        raccoon: `🦝 Tip: Senior Wing (Class 6–8) unlocks Algebra Equations & Falling Meteor Typing!`
       };
       const bubble = document.getElementById('mascotSpeech');
       if (bubble) bubble.textContent = lines[who] || '🌟 Keep learning and shining!';
@@ -1760,44 +1889,47 @@
         noticeBanner.textContent = appState.schoolNotice;
       }
 
+      const ringEl = document.getElementById('playerAvatarRing');
+
       if (stu) {
         normalizeStudentObject(stu);
         const overallLevel = Math.floor(stu.xp / 100) + 1;
         const xpInLevel = stu.xp % 100;
 
+        if (ringEl) {
+          ringEl.className = 'avatar-ring ' + (stu.equippedFrame || '');
+        }
         document.getElementById('playerAvatarIcon').textContent = stu.avatar;
         document.getElementById('playerAuthBadge').textContent = 'LOCKED 🔒';
         document.getElementById('playerAuthBadge').style.background = '#22c55e';
-        document.getElementById('playerNameDisplay').textContent = `${stu.name.toUpperCase()} (${stu.classGrade})`;
+        document.getElementById('playerTitleTag').textContent = stu.equippedTitle || '🌱 GYANOVA SCHOLAR';
+        document.getElementById('playerNameDisplay').textContent = `${stu.name.toUpperCase()} • ${stu.classGrade}`;
         document.getElementById('playerStarsDisplay').textContent = `⭐ ${stu.stars} Stars`;
         document.getElementById('playerXpDisplay').textContent = `${stu.xp} XP`;
         document.getElementById('playerLevelText').textContent = `LEVEL ${overallLevel}`;
         document.getElementById('playerNextLvlText').textContent = `${xpInLevel} / 100 XP`;
         document.getElementById('playerLevelBar').style.width = `${Math.max(6, xpInLevel)}%`;
 
-        // Update Per-Game Level Badges on the 6 Center Cards
         ['canvas', 'math', 'spelling', 'brain', 'story', 'typing'].forEach(gameKey => {
           const badge = document.getElementById('lvlBadge_' + gameKey);
-          if (badge) {
-            badge.textContent = `LVL ${stu.gameLevels[gameKey] || 1} • ∞`;
-          }
+          if (badge) badge.textContent = `LVL ${stu.gameLevels[gameKey] || 1} • ∞`;
         });
 
-        // Update Infinite Daily Mission Bar
         const qPct = Math.round(((stu.questProgress % 3) / 3) * 100);
         document.getElementById('dailyMissionWaveTitle').textContent = `DAILY MISSION — WAVE ${stu.questWave}`;
         document.getElementById('dailyQuestText').textContent = `Wave ${stu.questWave} Quests: ${stu.questProgress % 3}/3 Completed! (+25 Bonus XP per Wave)`;
         document.getElementById('dailyQuestBar').style.width = `${qPct}%`;
 
-        // Update Trophy Shelf Unlocks
         document.getElementById('trophy_math').classList.toggle('locked', (stu.gameLevels.math || 1) < 3);
         document.getElementById('trophy_thinker').classList.toggle('locked', (stu.gameLevels.brain || 1) < 3 && (stu.gameLevels.typing || 1) < 3);
         document.getElementById('trophy_artist').classList.toggle('locked', (stu.gameLevels.canvas || 1) < 2);
         document.getElementById('trophy_legend').classList.toggle('locked', stu.xp < 300);
       } else {
+        if (ringEl) ringEl.className = 'avatar-ring';
         document.getElementById('playerAvatarIcon').textContent = '👤';
         document.getElementById('playerAuthBadge').textContent = 'LOGIN';
         document.getElementById('playerAuthBadge').style.background = '#f59e0b';
+        document.getElementById('playerTitleTag').textContent = '🌱 NURSERY TO CLASS 8TH';
         document.getElementById('playerNameDisplay').textContent = 'CREATE PROFILE / LOGIN';
         document.getElementById('playerStarsDisplay').textContent = '⭐ 0 Stars';
         document.getElementById('playerXpDisplay').textContent = '0 XP';
@@ -1813,14 +1945,9 @@
         document.getElementById('dailyMissionWaveTitle').textContent = `DAILY MISSION — WAVE 1`;
         document.getElementById('dailyQuestText').textContent = `Login with your Student PIN to track Infinite Quests!`;
         document.getElementById('dailyQuestBar').style.width = `0%`;
-
-        ['trophy_math', 'trophy_thinker', 'trophy_artist', 'trophy_legend'].forEach(id => {
-          const el = document.getElementById(id);
-          if (el) el.classList.add('locked');
-        });
       }
 
-      // Render Leaderboard (Sorted strictly by Real Earned XP & Stars)
+      // Render Leaderboard
       const sorted = [...appState.players]
         .map(normalizeStudentObject)
         .sort((a, b) => (b.xp - a.xp) || (b.stars - a.stars));
@@ -1831,16 +1958,16 @@
       if (sorted.length === 0) {
         if (podiumEl) {
           podiumEl.innerHTML = `
-            <div style="grid-column:span 3; background:rgba(255,255,255,0.08); border:2px dashed rgba(255,255,255,0.25); border-radius:18px; padding:16px 10px; text-align:center;">
-              <div style="font-size:28px;">🏆</div>
-              <div style="font-size:13px; font-weight:800; color:#fde047; margin-top:4px;">Leaderboard is Fresh (0 XP)!</div>
-              <div style="font-size:11.5px; color:#cbd5e1; margin-top:2px;">Register your Student Profile & play any game to become Rank #1!</div>
+            <div style="grid-column:span 3; background:rgba(255,255,255,0.08); border:2px dashed rgba(255,255,255,0.25); border-radius:18px; padding:14px 10px; text-align:center;">
+              <div style="font-size:26px;">🏆</div>
+              <div style="font-size:13px; font-weight:800; color:#fde047; margin-top:4px;">Fresh Leaderboard (0 XP Start)!</div>
+              <div style="font-size:11px; color:#cbd5e1; margin-top:2px;">Register your Nursery–Class 8th Profile & become Rank #1!</div>
             </div>
           `;
         }
         if (listEl) {
           listEl.innerHTML = `
-            <button class="btn-3d btn-gold" style="width:100%; font-size:15px; padding:8px;" onclick="openAuthModal('register')">
+            <button class="btn-3d btn-gold" style="width:100%; font-size:14.5px; padding:8px;" onclick="openAuthModal('register')">
               ➕ Create First Student Profile
             </button>
           `;
@@ -1885,18 +2012,18 @@
             const isMe = stu && stu.id === p.id;
             const lvl = Math.floor(p.xp / 100) + 1;
             return `
-              <div class="lb-row ${isMe ? 'is-me' : ''}" title="${p.name} (${p.classGrade}) - Protected by PIN">
+              <div class="lb-row ${isMe ? 'is-me' : ''}" title="${p.name} (${p.classGrade}) - ${p.equippedTitle}">
                 <div class="lb-row-left">
                   <div class="lb-rank-badge" style="background:${badgeColors[idx] || '#38bdf8'};">${idx + 1}</div>
                   <div class="lb-mini-avatar">${p.avatar}</div>
                   <div class="lb-user-meta">
                     <span class="lb-user-name">${p.name} ${isMe ? ' (YOU)' : ''}</span>
-                    <span class="lb-user-sub">${p.classGrade} • Level ${lvl}</span>
+                    <span class="lb-user-sub">${p.classGrade} • Lvl ${lvl}</span>
                   </div>
                 </div>
                 <div class="lb-score-right">
                   <span>⭐ ${p.stars}</span>
-                  <span style="font-size:11px; color:#38bdf8;">${p.xp} XP</span>
+                  <span style="font-size:10.5px; color:#38bdf8;">${p.xp} XP</span>
                 </div>
               </div>
             `;
@@ -1905,7 +2032,6 @@
       }
     }
 
-    /* Award XP, Stars & Advance Game Level for the Logged-In Student */
     function rewardStudentProgress(gameKey, starsEarned, xpEarned, advanceGameLevel = true) {
       const stu = getLoggedStudent();
       if (!stu) {
@@ -1920,14 +2046,13 @@
         stu.gameLevels[gameKey] += 1;
       }
 
-      // Advance Infinite Daily Quest Wave
       stu.questProgress += 1;
       let waveBonusMsg = '';
       if (stu.questProgress % 3 === 0) {
         stu.questWave += 1;
         stu.xp += 25;
         stu.stars += 5;
-        waveBonusMsg = ` + WaveCleared Bonus (+25 XP)!`;
+        waveBonusMsg = ` + Wave Bonus (+25 XP)!`;
       }
 
       savePortalState();
@@ -1938,25 +2063,25 @@
     }
 
     /* ============================================================================
-       STUDENT REGISTRATION & 4-DIGIT PIN LOGIN SYSTEM (NO ACCOUNT HIJACKING!)
+       STUDENT REGISTRATION (NURSERY TO CLASS 8TH) & 4-DIGIT PIN LOGIN
        ============================================================================ */
     function openAuthModal(defaultTab = 'login') {
       playTone('click');
       clearAllGameTimers();
       const modal = document.getElementById('mainModal');
       modal.classList.add('active');
-      document.getElementById('modalTitle').innerHTML = '🔐 STUDENT ACCOUNT — PIN Protected Profile';
+      document.getElementById('modalTitle').innerHTML = '🔐 STUDENT ACCOUNT — Nursery to Class 8th PIN Login';
 
-      const avatars = ['🦁', '🐯', '🐼', '🦊', '🐨', '🐸', '🦄', '🐰', '🐵', '🦉', '🐬', '🦖'];
+      const avatars = ['🦁', '🐯', '🐼', '🦊', '🐨', '🐸', '🦄', '🐰', '🐵', '🦉', '🐬', '🦖', '🦅', '🐲'];
       const body = document.getElementById('modalBody');
 
       body.innerHTML = `
         <div style="display:flex; flex-direction:column; gap:18px; max-width:640px; margin:0 auto;">
-          <div style="display:flex; gap:10px; justify-content:center;">
-            <button id="tabBtnLogin" class="btn-3d ${defaultTab === 'login' ? 'btn-blue' : ''}" style="background:${defaultTab === 'login' ? '' : '#64748b'}; font-size:16px;" onclick="openAuthModal('login')">
+          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+            <button class="btn-3d ${defaultTab === 'login' ? 'btn-blue' : ''}" style="background:${defaultTab === 'login' ? '' : '#64748b'}; font-size:16px;" onclick="openAuthModal('login')">
               🔑 Login Existing Student
             </button>
-            <button id="tabBtnReg" class="btn-3d ${defaultTab === 'register' ? 'btn-green' : ''}" style="background:${defaultTab === 'register' ? '' : '#64748b'}; font-size:16px;" onclick="openAuthModal('register')">
+            <button class="btn-3d ${defaultTab === 'register' ? 'btn-green' : ''}" style="background:${defaultTab === 'register' ? '' : '#64748b'}; font-size:16px;" onclick="openAuthModal('register')">
               ➕ Create New Student Profile
             </button>
           </div>
@@ -1966,45 +2091,39 @@
               <h3 style="font-family:'Baloo 2',cursive; font-size:22px; color:#1e3a8a;">🔑 Enter Your Secret 4-Digit Student PIN</h3>
               ${appState.players.length === 0 ? `
                 <div style="background:#fef3c7; border:2px solid #f59e0b; padding:14px; border-radius:14px; font-weight:700; color:#92400e;">
-                  No students have registered yet! Click <strong>"Create New Student Profile"</strong> above to create your account starting from 0 XP!
+                  No students have registered yet! Click <strong>"Create New Student Profile"</strong> above to start from 0 XP!
                 </div>
               ` : `
-                <label style="font-weight:800; font-size:14px;">Select Your Name:</label>
+                <label style="font-weight:800; font-size:14px;">Select Your Name & Class:</label>
                 <select id="loginStudentSelect" class="kid-select">
                   ${appState.players.map(p => `<option value="${p.id}">${p.avatar} ${p.name} (${p.classGrade}) — ${p.xp} XP</option>`).join('')}
                 </select>
                 <label style="font-weight:800; font-size:14px;">Your Secret 4-Digit PIN:</label>
-                <input id="loginPinInput" type="password" maxlength="4" inputmode="numeric" placeholder="Enter 4-digit PIN (e.g. 1234)" class="kid-input" />
+                <input id="loginPinInput" type="password" maxlength="4" inputmode="numeric" placeholder="Enter 4-digit PIN (e.g. 1234)" class="kid-input" onkeydown="if(event.key==='Enter') handleStudentPinLogin()" />
                 <div id="loginErrorMsg" style="color:#dc2626; font-weight:800; font-size:14px; min-height:20px;"></div>
                 <button class="btn-3d btn-blue" onclick="handleStudentPinLogin()">🔓 Unlock My Profile</button>
               `}
             </div>
           ` : `
             <div style="background:#ffffff; padding:22px; border-radius:24px; border:4px solid #22c55e; display:flex; flex-direction:column; gap:12px;">
-              <h3 style="font-family:'Baloo 2',cursive; font-size:22px; color:#15803d;">🌟 New Student Registration (Starts at 0 XP)</h3>
+              <h3 style="font-family:'Baloo 2',cursive; font-size:22px; color:#15803d;">🌟 Student Registration (Nursery to Class 8th • 0 XP Start)</h3>
               <label style="font-weight:800; font-size:14px;">Your Full Name:</label>
-              <input id="regNameInput" type="text" maxlength="22" placeholder="Enter your name (e.g. Aarav Sharma)" class="kid-input" />
+              <input id="regNameInput" type="text" maxlength="24" placeholder="Enter your full name" class="kid-input" />
 
-              <label style="font-weight:800; font-size:14px;">Select Your Class:</label>
+              <label style="font-weight:800; font-size:14px;">Select Your Class (Games adapt to your Class!):</label>
               <select id="regClassSelect" class="kid-select">
-                <option value="Nursery">Nursery</option>
-                <option value="LKG">LKG</option>
-                <option value="UKG">UKG</option>
-                <option value="Class 1">Class 1</option>
-                <option value="Class 2">Class 2</option>
-                <option value="Class 3">Class 3</option>
-                <option value="Class 4">Class 4</option>
+                ${ALL_SCHOOL_CLASSES.map(c => `<option value="${c}">${c}</option>`).join('')}
               </select>
 
               <label style="font-weight:800; font-size:14px;">Choose Your Mascot Avatar:</label>
               <input type="hidden" id="regSelectedAvatar" value="🦁" />
               <div style="display:flex; gap:8px; flex-wrap:wrap;" id="avatarPickerGrid">
                 ${avatars.map((av, idx) => `
-                  <button type="button" onclick="selectRegAvatar('${av}', this)" style="font-size:28px; padding:6px 10px; border-radius:14px; border:3px solid ${idx===0?'#2563eb':'#cbd5e1'}; background:${idx===0?'#dbeafe':'#f8fafc'}; cursor:pointer;">${av}</button>
+                  <button type="button" onclick="selectRegAvatar('${av}', this)" style="font-size:26px; padding:5px 9px; border-radius:14px; border:3px solid ${idx===0?'#2563eb':'#cbd5e1'}; background:${idx===0?'#dbeafe':'#f8fafc'}; cursor:pointer;">${av}</button>
                 `).join('')}
               </div>
 
-              <label style="font-weight:800; font-size:14px;">Create a Secret 4-Digit PIN (Remember this!):</label>
+              <label style="font-weight:800; font-size:14px;">Create a Secret 4-Digit PIN (Protects your account):</label>
               <input id="regPinInput" type="password" maxlength="4" inputmode="numeric" placeholder="Set 4-digit PIN (e.g. 4321)" class="kid-input" />
               <div id="regErrorMsg" style="color:#dc2626; font-weight:800; font-size:14px; min-height:20px;"></div>
               <button class="btn-3d btn-green" onclick="handleStudentRegistration()">🚀 Create My Profile & Start Playing</button>
@@ -2040,16 +2159,16 @@
         playTone('wrong'); return;
       }
       if (!/^\d{4}$/.test(pinVal)) {
-        errEl.textContent = '⚠️ Secret PIN must be exactly 4 digits (numbers only, like 1234).';
+        errEl.textContent = '⚠️ Secret PIN must be 4 digits (numbers like 1234).';
         playTone('wrong'); return;
       }
       const duplicate = appState.players.find(p => p.name.toLowerCase() === nameVal.toLowerCase() && p.classGrade === classVal);
       if (duplicate) {
-        errEl.textContent = '⚠️ A student with this name & class already exists! Please use Login tab.';
+        errEl.textContent = '⚠️ This name & class is already registered! Switch to the Login tab.';
         playTone('wrong'); return;
       }
 
-      const newStu = {
+      const newStu = normalizeStudentObject({
         id: 'stu_' + Date.now() + '_' + Math.floor(Math.random() * 1000),
         name: nameVal,
         classGrade: classVal,
@@ -2059,8 +2178,11 @@
         xp: 0,
         questWave: 1,
         questProgress: 0,
+        ownedItems: [],
+        equippedTitle: '🌱 GYANOVA SCHOLAR',
+        equippedFrame: '',
         gameLevels: { canvas: 1, math: 1, spelling: 1, brain: 1, story: 1, typing: 1 }
-      };
+      });
 
       appState.players.push(newStu);
       currentStudentId = newStu.id;
@@ -2069,7 +2191,7 @@
       renderDashboardUI();
       closeModal();
       playTone('win');
-      showTrophyToast(`🎉 Welcome ${newStu.name}! Your account starts at 0 XP — Let's play!`);
+      showTrophyToast(`🎉 Welcome ${newStu.name} (${newStu.classGrade})! Starting at 0 XP!`);
       autoPushCloudIfConfigured();
     }
 
@@ -2083,7 +2205,7 @@
 
       if (stu.pin !== pinVal) {
         playTone('wrong');
-        errEl.textContent = '❌ Wrong Secret PIN! You cannot open another student’s profile!';
+        errEl.textContent = '❌ Wrong Secret PIN! Account is locked.';
         return;
       }
 
@@ -2092,7 +2214,7 @@
       renderDashboardUI();
       closeModal();
       playTone('win');
-      showTrophyToast(`🔓 Welcome back, ${stu.name}! Ready for Level ${Math.floor(stu.xp / 100) + 1}!`);
+      showTrophyToast(`🔓 Welcome back, ${stu.name} (${stu.classGrade})!`);
     }
 
     function logoutCurrentStudent() {
@@ -2122,7 +2244,7 @@
           <div style="font-size:48px;">🛡️</div>
           <h3 style="font-family:'Baloo 2',cursive; font-size:22px; color:#991b1b;">Gyanova Heights School — Admin Lock</h3>
           <p style="font-size:13.5px; color:#475569; font-weight:700;">
-            Students are not allowed here. Enter the official School Admin Password to manage students, homework, logo, or GitHub backend:
+            Enter the official School Admin Password to manage Nursery–Class 8th students, homework, logo, or GitHub backend:
           </p>
           <input id="adminPassInput" type="password" placeholder="Enter Admin Password" class="kid-input" onkeydown="if(event.key==='Enter') verifyAdminPassword()" />
           <div id="adminPassError" style="color:#dc2626; font-weight:800; font-size:13.5px; min-height:18px;"></div>
@@ -2146,35 +2268,34 @@
     function renderSecretAdminDashboard() {
       const modal = document.getElementById('mainModal');
       modal.classList.add('active');
-      document.getElementById('modalTitle').innerHTML = '🛡️ GYANOVA SECRET ADMIN CONTROL CENTER (UNLOCKED)';
+      document.getElementById('modalTitle').innerHTML = '🛡️ GYANOVA SECRET ADMIN CONTROL CENTER (NURSERY – CLASS 8)';
       const cfg = getGhConfig();
       const body = document.getElementById('modalBody');
 
       body.innerHTML = `
-        <div style="display:flex; flex-direction:column; gap:20px;">
-          <!-- Top Admin Actions -->
+        <div style="display:flex; flex-direction:column; gap:18px;">
           <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center; background:#0f172a; color:#fff; padding:14px 18px; border-radius:20px; border:3px solid #38bdf8;">
             <div>
-              <div style="font-weight:900; font-size:16px; color:#fde047;">🏫 Gyanova Heights School — Master Controls</div>
-              <div style="font-size:12px; color:#cbd5e1;">Protected by password "ghs" • Total Registered Students: ${appState.players.length}</div>
+              <div style="font-weight:900; font-size:16px; color:#fde047;">🏫 Gyanova Heights School — Master Admin</div>
+              <div style="font-size:12px; color:#cbd5e1;">Nursery to Class 8th • Registered Students: ${appState.players.length}</div>
             </div>
             <div style="display:flex; gap:8px; flex-wrap:wrap;">
-              <button class="ribbon-btn" style="background:#0284c7;" onclick="document.getElementById('logoFileInput').click()">🖼️ Upload Custom Logo</button>
+              <button class="ribbon-btn" style="background:#0284c7;" onclick="document.getElementById('logoFileInput').click()">🖼️ Upload Logo</button>
               <button class="ribbon-btn" style="background:#16a34a;" onclick="pushToGitHubBackend()">☁️ Push to GitHub</button>
               <button class="ribbon-btn" style="background:#2563eb;" onclick="fetchCloudLeaderboard(true)">🔄 Pull from GitHub</button>
               <button class="ribbon-btn" style="background:#dc2626;" onclick="adminUnlockedSession=false; closeModal();">🔒 Lock Admin</button>
             </div>
           </div>
 
-          <!-- 1. School Notice & Homework Manager -->
+          <!-- 1. School Notice & Wing Homework Manager -->
           <div style="background:#fff; padding:18px; border-radius:22px; border:3px solid #cbd5e1; display:flex; flex-direction:column; gap:10px;">
-            <h4 style="font-family:'Baloo 2',cursive; font-size:20px; color:#1e3a8a;">📢 Live School Notice & Daily Homework Updater</h4>
+            <h4 style="font-family:'Baloo 2',cursive; font-size:20px; color:#1e3a8a;">📢 Live School Notice & Nursery–Class 8th Homework</h4>
             <label style="font-size:13px; font-weight:800;">Top Scrolling Notice Banner:</label>
             <input id="adminNoticeInput" class="kid-input" value="${(appState.schoolNotice || '').replace(/"/g, '&quot;')}" />
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px; margin-top:4px;">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:10px; margin-top:4px;">
               ${(appState.homeworkList || []).map((hw, i) => `
                 <div>
-                  <label style="font-size:12.5px; font-weight:800; color:#0369a1;">${hw.grade} Homework:</label>
+                  <label style="font-size:12.5px; font-weight:800; color:#0369a1;">${hw.grade}:</label>
                   <input id="adminHw_${i}" class="kid-input" style="font-size:13px; padding:8px;" value="${hw.task.replace(/"/g, '&quot;')}" />
                 </div>
               `).join('')}
@@ -2182,10 +2303,10 @@
             <button class="btn-3d btn-blue" style="align-self:flex-start; font-size:15px; padding:8px 18px;" onclick="adminSaveNotices()">💾 Update Notice & Homework</button>
           </div>
 
-          <!-- 2. Student Accounts, PIN Inspector & Score Manager -->
+          <!-- 2. Student Accounts, PIN Inspector & Score Moderation -->
           <div style="background:#fff; padding:18px; border-radius:22px; border:3px solid #cbd5e1; display:flex; flex-direction:column; gap:12px;">
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-              <h4 style="font-family:'Baloo 2',cursive; font-size:20px; color:#15803d;">👥 Registered Students (PINs, XP & Moderation)</h4>
+              <h4 style="font-family:'Baloo 2',cursive; font-size:20px; color:#15803d;">👥 Registered Students (PINs, Class & Moderation)</h4>
               <div style="display:flex; gap:8px;">
                 <button class="ribbon-btn" style="background:#f59e0b; color:#000;" onclick="adminResetAllScoresZero()">⚠️ Reset Everyone to 0 XP</button>
                 <button class="ribbon-btn" style="background:#dc2626;" onclick="adminDeleteAllStudents()">🗑️ Wipe All Profiles</button>
@@ -2213,7 +2334,7 @@
             `}
           </div>
 
-          <!-- 3. GitHub Cloud Database Settings (Hidden inside Admin Panel) -->
+          <!-- 3. GitHub Cloud Database Settings -->
           <div style="background:#fff; padding:18px; border-radius:22px; border:3px solid #cbd5e1; display:flex; flex-direction:column; gap:10px;">
             <h4 style="font-family:'Baloo 2',cursive; font-size:20px; color:#6d28d9;">☁️ GitHub Backend Cloud Configuration (data.json)</h4>
             <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:10px;">
@@ -2238,7 +2359,7 @@
       }
       savePortalState();
       renderDashboardUI();
-      showTrophyToast('✅ School Notice & Homework Updated!');
+      showTrophyToast('✅ School Notice & Nursery–Class 8th Homework Updated!');
       autoPushCloudIfConfigured();
     }
 
@@ -2247,7 +2368,7 @@
       if (idx === -1) return;
       if (action === 'add50') {
         appState.players[idx].xp += 50;
-        appState.players[idx].stars += 10;
+        appState.players[idx].stars += 15;
       } else if (action === 'zero') {
         appState.players[idx].xp = 0;
         appState.players[idx].stars = 0;
@@ -2288,7 +2409,6 @@
       autoPushCloudIfConfigured();
     }
 
-    /* Custom School Logo Uploader (Inside Secret Admin) */
     function handleLogoUpload(event) {
       const file = event.target.files && event.target.files[0];
       if (!file) return;
@@ -2403,10 +2523,9 @@
       playTone('click');
       clearAllGameTimers();
 
-      // Require student login before playing games so progress is saved to their own profile
-      const gameModesRequiringAuth = ['canvas', 'math', 'spelling', 'brain', 'story', 'typing'];
+      const gameModesRequiringAuth = ['canvas', 'math', 'spelling', 'brain', 'story', 'typing', 'shop', 'certificate'];
       if (gameModesRequiringAuth.includes(mode) && !getLoggedStudent()) {
-        showTrophyToast('🔐 Create or Unlock your Student PIN Profile to play & earn XP!');
+        showTrophyToast('🔐 Create or Unlock your Student PIN Profile first!');
         openAuthModal('register');
         return;
       }
@@ -2420,6 +2539,8 @@
       else if (mode === 'brain') renderBrainTeasersGame();
       else if (mode === 'story') renderStoryWorldGame();
       else if (mode === 'typing') renderTypingChampGame();
+      else if (mode === 'shop') renderStarShopModal();
+      else if (mode === 'certificate') renderMeritCertificateModal();
       else if (mode === 'profile') renderStudentProfileModal();
       else if (mode === 'champions') renderChampionsModal();
       else if (mode === 'notices') renderHomeworkNoticesModal();
@@ -2434,78 +2555,115 @@
     }
 
     /* ============================================================================
-       GAME 1: MAGIC CANVAS (UNLIMITED PROCEDURAL ART PROMPTS + SYMMETRY STUDIO)
+       GAME 1: MAGIC CANVAS PRO (SYMMETRY STUDIO + 16x16 PIXEL ART MAKER)
        ============================================================================ */
     let canvasCtx = null;
     let isDrawing = false;
     let brushColor = '#ef4444';
     let brushSize = 8;
-    let canvasMode = 'normal'; // 'normal', 'mirror', 'kaleido', 'rainbow'
+    let canvasMode = 'normal'; // 'normal', 'mirror', 'kaleido', 'rainbow', 'pixel16'
     let rainbowHue = 0;
 
-    const artChallenges = [
-      'Draw a Golden Crown for the Jungle Lion 🦁👑',
-      'Design a Futuristic Gyanova Space Rocket 🚀✨',
-      'Create a 4-Way Kaleidoscope Mandala Flower 🌸🌈',
-      'Draw a Friendly Robot Helper for Your Classroom 🤖📚',
-      'Paint a Magical Underwater Castle with Fish 🐠🏰',
-      'Design a Superfast Flying Solar Car 🚗☀️',
-      'Create a Glowing Night Sky with Constellations 🌙⭐',
-      'Draw a Happy Dinosaur Eating Ice Cream 🦖🍦'
+    const artPromptsBag = [
+      'Design a 4-Way Kaleidoscope Star Mandala 🌟',
+      'Create a 16x16 Pixel Art Retro Spaceship 🚀',
+      'Draw a Glowing Neon Cyber Robot 🤖',
+      'Paint the Solar System with Saturn’s Rings 🪐',
+      'Design a Crest Shield for Gyanova Heights School 🛡️',
+      'Create a Symmetry Butterfly with Rainbow Wings 🦋',
+      'Draw a Green Eco-Friendly Smart City 🌳🏙️',
+      'Create a Pixel Art Trophy for Champions 🏆',
+      'Draw an Ancient Indian Temple Silhouette at Sunset 🌅',
+      'Design a Futuristic Electric Bullet Train 🚄'
     ];
 
-    function renderMagicCanvasGame() {
+    function renderMagicCanvasGame(selectedTab = 'freehand') {
       const stu = getLoggedStudent();
       const curLvl = (stu && stu.gameLevels.canvas) ? stu.gameLevels.canvas : 1;
-      const promptText = artChallenges[(curLvl - 1) % artChallenges.length];
+      const promptText = getNextFromShuffleBag('art_prompts', artPromptsBag);
 
-      document.getElementById('modalTitle').innerHTML = `🎨 MAGIC CANVAS — Level ${curLvl} Studio`;
+      document.getElementById('modalTitle').innerHTML = `🎨 MAGIC CANVAS PRO — Level ${curLvl} Studio`;
       const colors = ['#ef4444', '#f97316', '#eab308', '#22c55e', '#06b6d4', '#3b82f6', '#a855f7', '#ec4899', '#78350f', '#0f172a', '#ffffff'];
       const stamps = ['🦁', '🐘', '🐯', '⭐', '🌈', '🚀', '🌸', '👑', '🦋', '🦖', '⚽', '🏫'];
 
-      document.getElementById('modalBody').innerHTML = `
+      const body = document.getElementById('modalBody');
+      body.innerHTML = `
         <div style="display:flex; flex-direction:column; gap:12px; align-items:center;">
-          <div style="background:linear-gradient(90deg,#ec4899,#8b5cf6); color:#fff; padding:10px 20px; border-radius:999px; border:3px solid #fff; font-weight:800; font-size:15px; width:100%; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-            🎯 Level ${curLvl} Art Mission: <strong>${promptText}</strong>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center; width:100%;">
+            <button class="btn-3d ${selectedTab==='freehand'?'btn-blue':''}" style="background:${selectedTab==='freehand'?'':'#64748b'}; font-size:15px; padding:6px 16px;" onclick="renderMagicCanvasGame('freehand')">
+              🖌️ Symmetry & Neon Studio
+            </button>
+            <button class="btn-3d ${selectedTab==='pixel'?'btn-purple':''}" style="background:${selectedTab==='pixel'?'':'#64748b'}; font-size:15px; padding:6px 16px;" onclick="renderMagicCanvasGame('pixel')">
+              👾 16×16 Pixel Art Grid
+            </button>
+          </div>
+
+          <div style="background:linear-gradient(90deg,#ec4899,#8b5cf6); color:#fff; padding:8px 18px; border-radius:999px; border:3px solid #fff; font-weight:800; font-size:14.5px; width:100%; text-align:center;">
+            🎯 Level ${curLvl} Creative Quest: <strong>${promptText}</strong>
           </div>
 
           <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center; background:#fff; padding:10px 14px; border-radius:20px; border:3px solid #cbd5e1; width:100%;">
             ${colors.map(c => `
-              <button onclick="brushColor='${c}'; canvasMode=(canvasMode==='rainbow'?'normal':canvasMode); playTone('click');" style="width:30px; height:30px; border-radius:50%; background:${c}; border:3px solid ${c === '#ffffff' ? '#94a3b8' : '#fff'}; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2);"></button>
+              <button onclick="brushColor='${c}'; canvasMode=(canvasMode==='rainbow'?'normal':canvasMode); playTone('click');" style="width:28px; height:28px; border-radius:50%; background:${c}; border:3px solid ${c === '#ffffff' ? '#94a3b8' : '#fff'}; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2);"></button>
             `).join('')}
-            <input type="range" min="3" max="28" value="8" oninput="brushSize=Number(this.value)" style="width:85px; cursor:pointer;" title="Brush Size" />
-            <button class="ribbon-btn" style="background:#7c3aed;" onclick="canvasMode='normal'; playTone('click');">✏️ Normal</button>
-            <button class="ribbon-btn" style="background:#0284c7;" onclick="canvasMode='mirror'; playTone('click');">🦋 2x Mirror</button>
-            <button class="ribbon-btn" style="background:#db2777;" onclick="canvasMode='kaleido'; playTone('click');">❄️ 4x Mandala</button>
-            <button class="ribbon-btn" style="background:linear-gradient(90deg,#ef4444,#eab308,#22c55e,#3b82f6);" onclick="canvasMode='rainbow'; playTone('click');">🌈 Magic Rainbow</button>
-            <button class="ribbon-btn" style="background:#475569;" onclick="clearMagicCanvas()">🧹 Clear</button>
+            ${selectedTab === 'freehand' ? `
+              <input type="range" min="3" max="26" value="8" oninput="brushSize=Number(this.value)" style="width:80px; cursor:pointer;" />
+              <button class="ribbon-btn" style="background:#7c3aed;" onclick="canvasMode='normal'; playTone('click');">✏️ Normal</button>
+              <button class="ribbon-btn" style="background:#0284c7;" onclick="canvasMode='mirror'; playTone('click');">🦋 2x Mirror</button>
+              <button class="ribbon-btn" style="background:#db2777;" onclick="canvasMode='kaleido'; playTone('click');">❄️ 4x Mandala</button>
+              <button class="ribbon-btn" style="background:linear-gradient(90deg,#ef4444,#eab308,#22c55e,#3b82f6);" onclick="canvasMode='rainbow'; playTone('click');">🌈 Rainbow</button>
+              <button class="ribbon-btn" style="background:#475569;" onclick="clearMagicCanvas()">🧹 Clear</button>
+            ` : `
+              <button class="ribbon-btn" style="background:#475569;" onclick="clearPixelArtGrid()">🧹 Clear Pixel Grid</button>
+            `}
           </div>
 
-          <canvas id="artBoard" width="760" height="350" style="background:#ffffff; border-radius:22px; border:5px solid #ec4899; box-shadow:0 10px 25px rgba(0,0,0,0.15); max-width:100%; cursor:crosshair; touch-action:none;"></canvas>
+          ${selectedTab === 'freehand' ? `
+            <canvas id="artBoard" width="760" height="330" style="background:#ffffff; border-radius:22px; border:5px solid #ec4899; box-shadow:0 10px 25px rgba(0,0,0,0.15); max-width:100%; cursor:crosshair; touch-action:none;"></canvas>
+          ` : `
+            <div class="pixel-grid-16" id="pixelArtBoard">
+              ${Array.from({ length: 256 }).map((_, idx) => `<div class="pixel-cell" onmousedown="paintPixelCell(this)" onmouseover="if(event.buttons===1) paintPixelCell(this)" ontouchstart="paintPixelCell(this)"></div>`).join('')}
+            </div>
+          `}
 
           <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; width:100%; justify-content:space-between; background:#fff; padding:10px 16px; border-radius:20px; border:3px solid #cbd5e1;">
-            <div style="display:flex; gap:5px; align-items:center; flex-wrap:wrap;">
-              <span style="font-weight:800; font-size:13px;">✨ Stamps:</span>
-              ${stamps.map(s => `
-                <button onclick="placeCanvasSticker('${s}')" style="font-size:22px; background:#f1f5f9; border:2px solid #cbd5e1; border-radius:10px; padding:3px 8px; cursor:pointer;">${s}</button>
-              `).join('')}
-            </div>
-            <button class="btn-3d btn-green" style="font-size:16px;" onclick="completeCanvasLevel()">
-              🌟 Complete Level ${curLvl} (+15 ⭐ & +30 XP)
+            ${selectedTab === 'freehand' ? `
+              <div style="display:flex; gap:5px; align-items:center; flex-wrap:wrap;">
+                <span style="font-weight:800; font-size:13px;">✨ Stamps:</span>
+                ${stamps.map(s => `<button onclick="placeCanvasSticker('${s}')" style="font-size:21px; background:#f1f5f9; border:2px solid #cbd5e1; border-radius:10px; padding:2px 7px; cursor:pointer;">${s}</button>`).join('')}
+              </div>
+            ` : `<div style="font-weight:800; font-size:13.5px; color:#6d28d9;">👾 Drag across squares to paint 16×16 retro pixel art!</div>`}
+            <button class="btn-3d btn-green" style="font-size:16px;" onclick="completeCanvasLevel('${selectedTab}')">
+              🌟 Complete Level ${curLvl} (+15 ⭐ & +35 XP)
             </button>
           </div>
         </div>
       `;
-      setTimeout(() => initMagicCanvasDOM(curLvl), 30);
+
+      if (selectedTab === 'freehand') {
+        setTimeout(() => initMagicCanvasDOM(), 30);
+      }
     }
 
-    function initMagicCanvasDOM(curLvl) {
+    function paintPixelCell(cellEl) {
+      if (!cellEl) return;
+      cellEl.style.background = brushColor;
+    }
+
+    function clearPixelArtGrid() {
+      playTone('click');
+      const grid = document.getElementById('pixelArtBoard');
+      if (!grid) return;
+      Array.from(grid.children).forEach(c => { c.style.background = '#ffffff'; });
+    }
+
+    function initMagicCanvasDOM() {
       const canvas = document.getElementById('artBoard');
       if (!canvas) return;
       canvasCtx = canvas.getContext('2d');
       canvasCtx.lineCap = 'round';
       canvasCtx.lineJoin = 'round';
-      clearMagicCanvas(curLvl);
+      clearMagicCanvas();
 
       let lastPos = null;
       const getPos = (e) => {
@@ -2527,13 +2685,11 @@
         }
         canvasCtx.lineWidth = brushSize;
 
-        // Primary stroke
         canvasCtx.beginPath();
         canvasCtx.moveTo(p1.x, p1.y);
         canvasCtx.lineTo(p2.x, p2.y);
         canvasCtx.stroke();
 
-        // Symmetry modes
         if (canvasMode === 'mirror' || canvasMode === 'kaleido') {
           canvasCtx.beginPath();
           canvasCtx.moveTo(canvas.width - p1.x, p1.y);
@@ -2553,11 +2709,7 @@
         }
       };
 
-      const start = (e) => {
-        e.preventDefault();
-        isDrawing = true;
-        lastPos = getPos(e);
-      };
+      const start = (e) => { e.preventDefault(); isDrawing = true; lastPos = getPos(e); };
       const move = (e) => {
         if (!isDrawing || !lastPos) return;
         e.preventDefault();
@@ -2575,17 +2727,16 @@
       canvas.addEventListener('touchend', end);
     }
 
-    function clearMagicCanvas(lvl = 1) {
+    function clearMagicCanvas() {
       if (!canvasCtx) return;
       canvasCtx.fillStyle = '#ffffff';
-      canvasCtx.fillRect(0, 0, 760, 350);
-      // Draw subtle guide watermark
+      canvasCtx.fillRect(0, 0, 760, 330);
       canvasCtx.save();
       canvasCtx.strokeStyle = '#e2e8f0';
       canvasCtx.setLineDash([6, 6]);
       canvasCtx.beginPath();
-      canvasCtx.moveTo(380, 0); canvasCtx.lineTo(380, 350);
-      canvasCtx.moveTo(0, 175); canvasCtx.lineTo(760, 175);
+      canvasCtx.moveTo(380, 0); canvasCtx.lineTo(380, 330);
+      canvasCtx.moveTo(0, 165); canvasCtx.lineTo(760, 165);
       canvasCtx.stroke();
       canvasCtx.restore();
     }
@@ -2594,103 +2745,170 @@
       if (!canvasCtx) return;
       playTone('click');
       const x = 90 + Math.random() * 580;
-      const y = 70 + Math.random() * 220;
-      canvasCtx.font = '46px serif';
+      const y = 70 + Math.random() * 200;
+      canvasCtx.font = '44px serif';
       canvasCtx.fillText(emoji, x, y);
     }
 
-    function completeCanvasLevel() {
-      rewardStudentProgress('canvas', 15, 30, true);
-      renderMagicCanvasGame();
+    function completeCanvasLevel(tabMode) {
+      rewardStudentProgress('canvas', 15, 35, true);
+      renderMagicCanvasGame(tabMode);
     }
 
     /* ============================================================================
-       GAME 2: MATH WIZARD (INFINITE PROCEDURAL LEVEL GENERATOR: LVL 1 TO 999+)
+       GAME 2: MATH WIZARD (GRADE-ADAPTIVE NURSERY TO CLASS 8TH FORMULA ENGINE)
        ============================================================================ */
-    let mathSession = { subWave: 1, maxSubWaves: 4, streak: 0, correctAns: 0, options: [], questionStr: '', hintStr: '' };
+    let mathSession = { subWave: 1, maxSubWaves: 4, streak: 0, correctAns: 0, options: [], questionStr: '', hintStr: '', overrideWing: null };
 
     function renderMathWizardGame() {
       mathSession.subWave = 1;
       generateInfiniteMathWave();
     }
 
+    function setMathWingOverride(wing) {
+      mathSession.overrideWing = wing;
+      playTone('click');
+      generateInfiniteMathWave();
+    }
+
     function generateInfiniteMathWave() {
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.math) ? stu.gameLevels.math : 1;
-      document.getElementById('modalTitle').innerHTML = `🧮 MATH WIZARD — Level ${lvl} (Wave ${mathSession.subWave}/${mathSession.maxSubWaves})`;
+      const wing = mathSession.overrideWing || (stu ? getStudentWing(stu.classGrade) : 'junior');
 
-      // Procedural difficulty scaling based on Student's Math Level (1 to Infinity)
-      const rangeBase = 4 + lvl * 3;
-      const modeRoll = (lvl + mathSession.subWave) % 5;
-      let a, b, ans, qText, hint;
+      document.getElementById('modalTitle').innerHTML = `🧮 MATH WIZARD — Level ${lvl} (${wing.toUpperCase()} WING • Wave ${mathSession.subWave}/${mathSession.maxSubWaves})`;
 
-      if (lvl <= 2 || modeRoll === 0) {
-        a = Math.floor(Math.random() * rangeBase) + 1;
-        b = Math.floor(Math.random() * rangeBase) + 1;
-        ans = a + b;
-        qText = `${a} + ${b} = ?`;
-        hint = a <= 8 && b <= 8 ? ('🍎'.repeat(a) + ' ➕ ' + '🍎'.repeat(b)) : '⚡ Mental Addition Wave!';
-      } else if (modeRoll === 1) {
-        a = Math.floor(Math.random() * rangeBase) + 6;
-        b = Math.floor(Math.random() * a) + 1;
-        ans = a - b;
-        qText = `${a} - ${b} = ?`;
-        hint = '🚀 Subtraction Challenge!';
-      } else if (modeRoll === 2) {
-        a = Math.floor(Math.random() * Math.min(15, 2 + lvl)) + 2;
-        b = Math.floor(Math.random() * 10) + 2;
-        ans = a * b;
-        qText = `${a} × ${b} = ?`;
-        hint = `👑 Multiplication Table of ${a}!`;
-      } else if (modeRoll === 3) {
-        // Missing Number Algebra Puzzle: a + ? = c
-        a = Math.floor(Math.random() * rangeBase) + 2;
-        ans = Math.floor(Math.random() * rangeBase) + 1;
-        const c = a + ans;
-        qText = `${a} + [ ? ] = ${c}`;
-        hint = '🧠 Find the Missing Mystery Number!';
+      let a, b, c, ans, qText, hint;
+      const subRoll = (lvl + mathSession.subWave + Math.floor(Math.random() * 100)) % 4;
+
+      if (wing === 'junior') {
+        // Nursery, LKG, UKG, Class 1, Class 2
+        const maxN = 5 + lvl * 2;
+        if (subRoll === 0 || subRoll === 1) {
+          a = Math.floor(Math.random() * maxN) + 1;
+          b = Math.floor(Math.random() * maxN) + 1;
+          ans = a + b;
+          qText = `${a} + ${b} = ?`;
+          hint = (a <= 7 && b <= 7) ? ('🍎'.repeat(a) + ' ➕ ' + '🍎'.repeat(b)) : '🌱 Junior Addition Wave!';
+        } else if (subRoll === 2) {
+          a = Math.floor(Math.random() * maxN) + 5;
+          b = Math.floor(Math.random() * a) + 1;
+          ans = a - b;
+          qText = `${a} - ${b} = ?`;
+          hint = '🎈 Junior Subtraction Wave!';
+        } else {
+          ans = Math.floor(Math.random() * maxN) + 2;
+          a = Math.floor(Math.random() * 6) + 1;
+          qText = `${a} + [ ? ] = ${a + ans}`;
+          hint = '🧩 Find the Missing Number!';
+        }
+      } else if (wing === 'middle') {
+        // Class 3, Class 4, Class 5: Multiplication, Division, BODMAS, Perimeter
+        if (subRoll === 0) {
+          a = Math.floor(Math.random() * (6 + lvl)) + 3;
+          b = Math.floor(Math.random() * 11) + 2;
+          ans = a * b;
+          qText = `${a} × ${b} = ?`;
+          hint = `🚀 Multiplication Mastery (Table of ${a})`;
+        } else if (subRoll === 1) {
+          b = Math.floor(Math.random() * 11) + 2;
+          ans = Math.floor(Math.random() * (6 + lvl)) + 2;
+          a = b * ans;
+          qText = `${a} ÷ ${b} = ?`;
+          hint = '💎 Exact Division Challenge!';
+        } else if (subRoll === 2) {
+          // BODMAS: (a × b) + c
+          a = Math.floor(Math.random() * 8) + 2;
+          b = Math.floor(Math.random() * 7) + 2;
+          c = Math.floor(Math.random() * 15) + 3;
+          ans = (a * b) + c;
+          qText = `(${a} × ${b}) + ${c} = ?`;
+          hint = '⚡ BODMAS Rule: Multiply first, then Add!';
+        } else {
+          // Geometry Perimeter of Rectangle
+          a = Math.floor(Math.random() * 12) + 4;
+          b = Math.floor(Math.random() * 10) + 3;
+          ans = 2 * (a + b);
+          qText = `Perimeter of ${a}cm × ${b}cm Rectangle = ?`;
+          hint = '📐 Formula: 2 × (Length + Breadth)';
+        }
       } else {
-        // Exact Division Wave
-        b = Math.floor(Math.random() * 9) + 2;
-        ans = Math.floor(Math.random() * Math.min(12, 2 + lvl)) + 1;
-        a = b * ans;
-        qText = `${a} ÷ ${b} = ?`;
-        hint = '💎 Super Division Boss Wave!';
+        // Senior Wing (Class 6, Class 7, Class 8): Linear Algebra, Squares/Roots, Percentages, Exponents
+        if (subRoll === 0) {
+          // Linear Equation: ax + b = c -> solve for x
+          ans = Math.floor(Math.random() * (8 + lvl)) + 2; // x
+          a = Math.floor(Math.random() * 7) + 2;
+          b = Math.floor(Math.random() * 18) + 3;
+          c = a * ans + b;
+          qText = `If ${a}x + ${b} = ${c}, find x = ?`;
+          hint = `👑 Class 6–8 Linear Algebra: Subtract ${b}, then divide by ${a}!`;
+        } else if (subRoll === 1) {
+          // Percentage calculation
+          const pcts = [10, 20, 25, 50, 75];
+          const p = pcts[Math.floor(Math.random() * pcts.length)];
+          const mult = Math.floor(Math.random() * 12) + 2;
+          const total = (100 / (p === 75 ? 25 : p)) * mult * (p === 75 ? 4 : 1);
+          ans = Math.round((p / 100) * total);
+          qText = `${p}% of ${total} = ?`;
+          hint = '📊 Senior Percentage Challenge!';
+        } else if (subRoll === 2) {
+          // Squares & Square Roots
+          a = Math.floor(Math.random() * 14) + 3;
+          b = Math.floor(Math.random() * 10) + 2;
+          ans = (a * a) - b;
+          qText = `${a}² - ${b} = ?`;
+          hint = `🔬 Exponents: Calculate (${a} × ${a}) minus ${b}`;
+        } else {
+          // Integer & BODMAS Equation: a × b - c
+          a = Math.floor(Math.random() * 12) + 5;
+          b = Math.floor(Math.random() * 9) + 3;
+          c = Math.floor(Math.random() * 20) + 4;
+          ans = (a * b) - c;
+          qText = `(${a} × ${b}) - ${c} = ?`;
+          hint = '🧠 Senior Mental BODMAS Speed Wave!';
+        }
       }
 
       mathSession.correctAns = ans;
       const opts = new Set([ans]);
       while (opts.size < 4) {
-        const offset = (Math.floor(Math.random() * 11) - 5) || 1;
+        const step = Math.max(1, Math.floor(Math.abs(ans) * 0.2));
+        const offset = (Math.floor(Math.random() * (step * 2 + 5)) - step - 2) || 2;
         opts.add(Math.max(0, ans + offset));
       }
       mathSession.options = Array.from(opts).sort(() => Math.random() - 0.5);
 
       const body = document.getElementById('modalBody');
       body.innerHTML = `
-        <div style="display:flex; flex-direction:column; align-items:center; gap:18px; text-align:center;">
-          <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; width:100%;">
-            <span style="background:#1e3a8a; color:#fff; padding:6px 16px; border-radius:999px; font-weight:800;">🏆 Your Math Level: ${lvl} (Unlimited)</span>
-            <span style="background:#059669; color:#fff; padding:6px 16px; border-radius:999px; font-weight:800;">⚡ Wave: ${mathSession.subWave} / ${mathSession.maxSubWaves}</span>
-            <span style="background:#d97706; color:#fff; padding:6px 16px; border-radius:999px; font-weight:800;">🔥 Streak: ${mathSession.streak}</span>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:16px; text-align:center;">
+          <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+            <button class="ribbon-btn" style="background:${wing==='junior'?'#16a34a':'#334155'};" onclick="setMathWingOverride('junior')">🌱 Junior (Nursery–2)</button>
+            <button class="ribbon-btn" style="background:${wing==='middle'?'#2563eb':'#334155'};" onclick="setMathWingOverride('middle')">🚀 Middle (Class 3–5)</button>
+            <button class="ribbon-btn" style="background:${wing==='senior'?'#7c3aed':'#334155'};" onclick="setMathWingOverride('senior')">👑 Senior Algebra (Class 6–8)</button>
           </div>
 
-          <div style="background:radial-gradient(circle,#4c1d95,#1e1b4b); color:#fff; width:100%; max-width:640px; border-radius:28px; padding:26px 20px; border:5px solid #fde047; box-shadow:0 12px 0 #311068;">
-            <div style="font-size:20px; color:#bae6fd; font-weight:800; margin-bottom:10px;">${hint}</div>
-            <div style="font-family:'Baloo 2',cursive; font-size:54px; font-weight:800; color:#fef08a; letter-spacing:2px; text-shadow:0 4px 0 #b45309;">
+          <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+            <span style="background:#1e3a8a; color:#fff; padding:5px 14px; border-radius:999px; font-weight:800; font-size:13px;">🏆 Level ${lvl} • ∞</span>
+            <span style="background:#059669; color:#fff; padding:5px 14px; border-radius:999px; font-weight:800; font-size:13px;">⚡ Wave ${mathSession.subWave}/${mathSession.maxSubWaves}</span>
+            <span style="background:#d97706; color:#fff; padding:5px 14px; border-radius:999px; font-weight:800; font-size:13px;">🔥 Streak: ${mathSession.streak}</span>
+          </div>
+
+          <div style="background:radial-gradient(circle,#4c1d95,#1e1b4b); color:#fff; width:100%; max-width:680px; border-radius:28px; padding:24px 18px; border:5px solid #fde047; box-shadow:0 12px 0 #311068;">
+            <div style="font-size:17px; color:#bae6fd; font-weight:800; margin-bottom:8px;">${hint}</div>
+            <div style="font-family:'Baloo 2',cursive; font-size:${qText.length > 16 ? '36px' : '50px'}; font-weight:800; color:#fef08a; letter-spacing:1.5px; text-shadow:0 4px 0 #b45309;">
               ${qText}
             </div>
           </div>
 
-          <div style="display:grid; grid-template-columns:repeat(2, minmax(145px, 230px)); gap:16px; justify-content:center;">
+          <div style="display:grid; grid-template-columns:repeat(2, minmax(145px, 230px)); gap:14px; justify-content:center;">
             ${mathSession.options.map(num => `
               <button onclick="submitInfiniteMathAnswer(${num})" style="
                 background:linear-gradient(180deg,#fde047,#eab308);
                 border:4px solid #fff;
                 border-radius:22px;
-                padding:15px;
+                padding:14px;
                 font-family:'Baloo 2',cursive;
-                font-size:34px;
+                font-size:32px;
                 font-weight:800;
                 color:#713f12;
                 cursor:pointer;
@@ -2698,7 +2916,7 @@
               ">${num}</button>
             `).join('')}
           </div>
-          <div id="mathFeedback" style="font-size:19px; font-weight:800; min-height:28px; color:#15803d;"></div>
+          <div id="mathFeedback" style="font-size:18px; font-weight:800; min-height:26px; color:#15803d;"></div>
         </div>
       `;
     }
@@ -2710,99 +2928,93 @@
         playTone('win');
         if (mathSession.subWave < mathSession.maxSubWaves) {
           mathSession.subWave += 1;
-          if (fb) fb.innerHTML = '✅ Correct! Next wave incoming...';
-          setTimeout(() => generateInfiniteMathWave(), 550);
+          if (fb) fb.innerHTML = '✅ Spot On! Loading next unique equation...';
+          setTimeout(() => generateInfiniteMathWave(), 500);
         } else {
-          // Completed all waves in this level -> Level Up!
           mathSession.subWave = 1;
-          rewardStudentProgress('math', 15, 35, true);
-          speakText('Level Up! Math Wizard Mastered!');
-          setTimeout(() => generateInfiniteMathWave(), 750);
+          rewardStudentProgress('math', 15, 40, true);
+          speakText('Level Up! Math Wizard Wave Cleared!');
+          setTimeout(() => generateInfiniteMathWave(), 700);
         }
       } else {
         mathSession.streak = 0;
         playTone('wrong');
         if (fb) {
           fb.style.color = '#dc2626';
-          fb.innerHTML = '💡 Not quite! Recalculate and tap the right answer!';
+          fb.innerHTML = '💡 Check your calculation and try another option!';
         }
       }
     }
     /* ============================================================================
-       GAME 3: SPELLING JUNGLE (120+ TIERED WORDS + DECOY TILES + UNLIMITED WAVES)
+       GAME 3: SPELLING JUNGLE (SHUFFLE BAG + LIVE DATAMUSE API + NURSERY–CLASS 8)
        ============================================================================ */
-    const spellingTierBank = [
-      // Tier 1: 3-4 Letter Foundation Words (Nursery - KG)
-      { word: 'CAT', emoji: '🐱', hint: 'Purring pet that chases mice' },
-      { word: 'DOG', emoji: '🐶', hint: 'Loyal pet that barks' },
-      { word: 'SUN', emoji: '☀️', hint: 'Shines brightly in the daytime sky' },
-      { word: 'BUS', emoji: '🚌', hint: 'Takes students to Gyanova Heights School' },
-      { word: 'COW', emoji: '🐮', hint: 'Gentle farm animal that gives us milk' },
-      { word: 'HAT', emoji: '🎩', hint: 'Worn on top of your head' },
-      { word: 'BEE', emoji: '🐝', hint: 'Makes sweet golden honey' },
-      { word: 'ANT', emoji: '🐜', hint: 'Tiny hardworking insect' },
-      { word: 'LION', emoji: '🦁', hint: 'Mighty King of the Jungle' },
-      { word: 'STAR', emoji: '⭐', hint: 'Twinkles in the night sky' },
-      { word: 'BOOK', emoji: '📖', hint: 'Filled with stories and knowledge' },
-      { word: 'TREE', emoji: '🌳', hint: 'Has green leaves, branches, and roots' },
-      { word: 'FROG', emoji: '🐸', hint: 'Green jumper that says ribbit' },
-      { word: 'FISH', emoji: '🐠', hint: 'Swims underwater with fins' },
-      { word: 'BIRD', emoji: '🐦', hint: 'Flies high in the sky with wings' },
-      { word: 'MILK', emoji: '🥛', hint: 'Healthy white drink for strong bones' },
-      { word: 'MOON', emoji: '🌙', hint: 'Glows in the dark night sky' },
-      { word: 'RAIN', emoji: '🌧️', hint: 'Water drops falling from clouds' },
-      { word: 'SHIP', emoji: '🚢', hint: 'Sails across the deep blue ocean' },
-      { word: 'DRUM', emoji: '🥁', hint: 'Musical instrument you beat with sticks' },
-
-      // Tier 2: 5-6 Letter Explorer Words (Class 1 - Class 2)
-      { word: 'APPLE', emoji: '🍎', hint: 'Crunchy red fruit that keeps the doctor away' },
-      { word: 'TIGER', emoji: '🐯', hint: 'Fast striped big cat of India' },
-      { word: 'MANGO', emoji: '🥭', hint: 'Sweet yellow King of Fruits' },
-      { word: 'TRAIN', emoji: '🚂', hint: 'Runs on railway tracks' },
-      { word: 'HOUSE', emoji: '🏠', hint: 'Where a family lives together' },
-      { word: 'WATER', emoji: '💧', hint: 'Clear liquid every living thing drinks' },
-      { word: 'SMILE', emoji: '😊', hint: 'Happy curve on your face' },
-      { word: 'EARTH', emoji: '🌍', hint: 'Our blue and green home planet' },
-      { word: 'CLOUD', emoji: '☁️', hint: 'Fluffy white shape floating in the sky' },
-      { word: 'PLANT', emoji: '🌱', hint: 'Grows from a seed in the soil' },
-      { word: 'ROBOT', emoji: '🤖', hint: 'Smart machine built with code and gears' },
-      { word: 'ZEBRA', emoji: '🦓', hint: 'African animal with black and white stripes' },
-      { word: 'PANDA', emoji: '🐼', hint: 'Cute black and white bear that loves bamboo' },
-      { word: 'BRUSH', emoji: '🖌️', hint: 'Tool used to paint colorful pictures' },
-      { word: 'CLOCK', emoji: '⏰', hint: 'Tells us the hour and minute of the day' },
-      { word: 'SCHOOL', emoji: '🏫', hint: 'Temple of learning where teachers guide us' },
-      { word: 'PENCIL', emoji: '✏️', hint: 'Used for writing and drawing in notebooks' },
-      { word: 'GARDEN', emoji: '🌻', hint: 'Beautiful place full of blooming flowers' },
-      { word: 'ROCKET', emoji: '🚀', hint: 'Blasts off into outer space' },
-      { word: 'PLANET', emoji: '🪐', hint: 'Orbits around the bright Sun' },
-
-      // Tier 3: 6-9 Letter Champion Vocabulary (Class 3 - Class 4 & Unlimited Bosses)
-      { word: 'MONKEY', emoji: '🐒', hint: 'Playful animal that swings from tree branches' },
-      { word: 'RABBIT', emoji: '🐰', hint: 'Fluffy long-eared animal that loves carrots' },
-      { word: 'ORANGE', emoji: '🍊', hint: 'Juicy citrus fruit rich in Vitamin C' },
-      { word: 'BRIDGE', emoji: '🌉', hint: 'Built over a river so people can cross' },
-      { word: 'TROPHY', emoji: '🏆', hint: 'Golden cup won by champions' },
-      { word: 'RAINBOW', emoji: '🌈', hint: 'Seven colorful arcs in the sky after rain' },
-      { word: 'TEACHER', emoji: '👩‍🏫', hint: 'Guides and inspires students every day' },
-      { word: 'ELEPHANT', emoji: '🐘', hint: 'Largest land animal with a long trunk' },
-      { word: 'COMPUTER', emoji: '💻', hint: 'Electronic brain used for coding and learning' },
-      { word: 'MOUNTAIN', emoji: '🏔️', hint: 'Giant rocky peak touching the clouds' },
-      { word: 'SUNSHINE', emoji: '🌤️', hint: 'Warm golden light from the morning sky' },
-      { word: 'DINOSAUR', emoji: '🦖', hint: 'Prehistoric giant reptile from millions of years ago' },
-      { word: 'NOTEBOOK', emoji: '📓', hint: 'Pages bound together for class notes' },
-      { word: 'CHAMPION', emoji: '🥇', hint: 'Winner who never gives up on learning' },
-      { word: 'UNIVERSE', emoji: '🌌', hint: 'All of space, stars, and galaxies combined' },
-      { word: 'BUTTERFLY', emoji: '🦋', hint: 'Colorful winged insect that starts as a caterpillar' },
-      { word: 'KNOWLEDGE', emoji: '🧠', hint: 'Power gained through reading, curiosity, and practice' },
-      { word: 'ADVENTURE', emoji: '🧭', hint: 'An exciting journey to discover new things' }
-    ];
+    const spellingPoolsByWing = {
+      junior: [
+        { word: 'LION', emoji: '🦁', hint: 'Mighty King of the Jungle' },
+        { word: 'STAR', emoji: '⭐', hint: 'Twinkles brightly in the night sky' },
+        { word: 'BOOK', emoji: '📖', hint: 'Full of stories and pictures' },
+        { word: 'TREE', emoji: '🌳', hint: 'Has green leaves, trunk, and roots' },
+        { word: 'FROG', emoji: '🐸', hint: 'Green pond jumper that croaks' },
+        { word: 'MILK', emoji: '🥛', hint: 'Healthy white drink for strong bones' },
+        { word: 'MOON', emoji: '🌙', hint: 'Shines softly at night' },
+        { word: 'SHIP', emoji: '🚢', hint: 'Sails across the deep blue ocean' },
+        { word: 'DRUM', emoji: '🥁', hint: 'Musical instrument played with sticks' },
+        { word: 'DUCK', emoji: '🦆', hint: 'Water bird that says quack' },
+        { word: 'APPLE', emoji: '🍎', hint: 'Crunchy red fruit' },
+        { word: 'TIGER', emoji: '🐯', hint: 'Striped national animal of India' },
+        { word: 'MANGO', emoji: '🥭', hint: 'Sweet yellow summer fruit' },
+        { word: 'TRAIN', emoji: '🚂', hint: 'Runs on railway tracks' },
+        { word: 'SMILE', emoji: '😊', hint: 'Happy expression on your face' },
+        { word: 'CLOUD', emoji: '☁️', hint: 'Floats in the sky and brings rain' },
+        { word: 'PLANT', emoji: '🌱', hint: 'Grows from a tiny seed in soil' },
+        { word: 'ZEBRA', emoji: '🦓', hint: 'Animal with black and white stripes' },
+        { word: 'PANDA', emoji: '🐼', hint: 'Cute bear that loves eating bamboo' },
+        { word: 'CLOCK', emoji: '⏰', hint: 'Tells us the time every day' }
+      ],
+      middle: [
+        { word: 'SCHOOL', emoji: '🏫', hint: 'Where students learn and grow together' },
+        { word: 'PLANET', emoji: '🪐', hint: 'World that orbits around a star' },
+        { word: 'ROCKET', emoji: '🚀', hint: 'Spacecraft that blasts into orbit' },
+        { word: 'GARDEN', emoji: '🌻', hint: 'Place filled with blooming flowers' },
+        { word: 'BRIDGE', emoji: '🌉', hint: 'Structure built to cross a river' },
+        { word: 'TROPHY', emoji: '🏆', hint: 'Golden cup awarded to winners' },
+        { word: 'RAINBOW', emoji: '🌈', hint: 'Seven colors appearing after rain' },
+        { word: 'COMPASS', emoji: '🧭', hint: 'Instrument that always points North' },
+        { word: 'VOLCANO', emoji: '🌋', hint: 'Mountain that erupts with glowing lava' },
+        { word: 'DIAMOND', emoji: '💎', hint: 'Hardest sparkling gemstone on Earth' },
+        { word: 'GRAVITY', emoji: '🍎', hint: 'Invisible force that pulls objects toward Earth' },
+        { word: 'SCIENCE', emoji: '🔬', hint: 'Study of nature through experiments' },
+        { word: 'LIBRARY', emoji: '📚', hint: 'Quiet hall filled with thousands of books' },
+        { word: 'ELEPHANT', emoji: '🐘', hint: 'Largest land mammal with a long trunk' },
+        { word: 'COMPUTER', emoji: '💻', hint: 'Digital machine used for coding and work' },
+        { word: 'MOUNTAIN', emoji: '🏔️', hint: 'Tall natural peak rising high above land' }
+      ],
+      senior: [
+        { word: 'UNIVERSE', emoji: '🌌', hint: 'All of space, time, stars, and galaxies' },
+        { word: 'FRACTION', emoji: '➗', hint: 'Numerical quantity that is not a whole number' },
+        { word: 'EQUATION', emoji: '🧮', hint: 'Mathematical statement with an equals sign' },
+        { word: 'MOLECULE', emoji: '⚛️', hint: 'Group of atoms bonded together chemically' },
+        { word: 'TELESCOPE', emoji: '🔭', hint: 'Optical instrument to observe distant stars' },
+        { word: 'ALGORITHM', emoji: '🤖', hint: 'Step-by-step procedure used in computer coding' },
+        { word: 'SATELLITE', emoji: '🛰️', hint: 'Object placed in orbit around Earth for communication' },
+        { word: 'MAGNETISM', emoji: '🧲', hint: 'Physical force exerted by magnets on iron' },
+        { word: 'ECOSYSTEM', emoji: '🌿', hint: 'Community of living organisms and their environment' },
+        { word: 'DEMOCRACY', emoji: '🏛️', hint: 'Government by the people through elected representatives' },
+        { word: 'PRECISION', emoji: '🎯', hint: 'Quality of being exact and accurate' },
+        { word: 'INVENTION', emoji: '💡', hint: 'A unique new device or process created by science' },
+        { word: 'ATMOSPHERE', emoji: '🌍', hint: 'Layer of gases surrounding planet Earth' },
+        { word: 'CHLOROPHYLL', emoji: '🍃', hint: 'Green pigment in leaves that absorbs sunlight' }
+      ]
+    };
 
     let spellSession = {
       subWave: 1,
       maxSubWaves: 3,
+      wingOverride: null,
       currentItem: null,
       guessedTiles: [],
-      poolTiles: []
+      poolTiles: [],
+      isLiveApiWord: false
     };
 
     function renderSpellingJungleGame() {
@@ -2810,26 +3022,71 @@
       startSpellingJungleWave();
     }
 
-    function startSpellingJungleWave() {
+    function setSpellingWingOverride(wing) {
+      spellSession.wingOverride = wing;
+      playTone('click');
+      startSpellingJungleWave();
+    }
+
+    async function fetchLiveDatamuseWord(wing) {
+      // Zero-Key Public Datamuse API for endless fresh English vocabulary with definitions!
+      const topics = wing === 'junior' ? ['animals', 'food', 'nature'] : wing === 'middle' ? ['space', 'school', 'weather'] : ['science', 'technology', 'mathematics'];
+      const topic = topics[Math.floor(Math.random() * topics.length)];
+      try {
+        const res = await fetch(`https://api.datamuse.com/words?ml=${topic}&md=d&max=35`);
+        if (!res.ok) return null;
+        const data = await res.json();
+        const valid = data.filter(item =>
+          item.word &&
+          /^[a-zA-Z]+$/.test(item.word) &&
+          item.defs &&
+          item.defs.length > 0 &&
+          ((wing === 'junior' && item.word.length >= 4 && item.word.length <= 5) ||
+           (wing === 'middle' && item.word.length >= 6 && item.word.length <= 8) ||
+           (wing === 'senior' && item.word.length >= 7 && item.word.length <= 10))
+        );
+        if (valid.length === 0) return null;
+        const pick = valid[Math.floor(Math.random() * valid.length)];
+        const rawDef = pick.defs[0].split('\t')[1] || 'A special vocabulary word to master!';
+        return {
+          word: pick.word.toUpperCase(),
+          emoji: '🌐',
+          hint: rawDef.charAt(0).toUpperCase() + rawDef.slice(1)
+        };
+      } catch (e) {
+        return null;
+      }
+    }
+
+    async function startSpellingJungleWave(useLiveApi = false) {
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.spelling) ? stu.gameLevels.spelling : 1;
-      document.getElementById('modalTitle').innerHTML = `🦁 SPELLING JUNGLE — Level ${lvl} (Word ${spellSession.subWave}/${spellSession.maxSubWaves})`;
+      const wing = spellSession.wingOverride || (stu ? getStudentWing(stu.classGrade) : 'junior');
 
-      // Select word appropriate for level, cycling infinitely with decoy letters at higher levels
-      const startPoolIdx = Math.min(spellingTierBank.length - 8, Math.floor((lvl - 1) * 2));
-      const slicePool = spellingTierBank.slice(Math.max(0, startPoolIdx - 4), Math.min(spellingTierBank.length, startPoolIdx + 14));
-      const chosen = slicePool[Math.floor(Math.random() * slicePool.length)] || spellingTierBank[lvl % spellingTierBank.length];
+      document.getElementById('modalTitle').innerHTML = `🦁 SPELLING JUNGLE — Level ${lvl} (${wing.toUpperCase()} • Word ${spellSession.subWave}/${spellSession.maxSubWaves})`;
+
+      let chosen = null;
+      spellSession.isLiveApiWord = false;
+
+      if (useLiveApi) {
+        showTrophyToast('🌐 Fetching fresh live vocabulary word...');
+        chosen = await fetchLiveDatamuseWord(wing);
+        if (chosen) spellSession.isLiveApiWord = true;
+      }
+
+      if (!chosen) {
+        const bank = spellingPoolsByWing[wing] || spellingPoolsByWing.junior;
+        chosen = getNextFromShuffleBag('spell_' + wing, bank);
+      }
 
       spellSession.currentItem = chosen;
       spellSession.guessedTiles = [];
 
-      // Create letter tiles + extra decoy tiles at higher levels
       const baseLetters = chosen.word.split('').map((ch, idx) => ({ ch, id: 'real_' + idx, used: false }));
-      const decoyCount = lvl >= 4 ? Math.min(4, Math.floor(lvl / 2)) : 0;
+      const decoyCount = wing === 'junior' ? 1 : wing === 'middle' ? 2 : 3;
       const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       for (let d = 0; d < decoyCount; d++) {
-        const randChar = alphabet[Math.floor(Math.random() * alphabet.length)];
-        baseLetters.push({ ch: randChar, id: 'decoy_' + d, used: false });
+        baseLetters.push({ ch: alphabet[Math.floor(Math.random() * 26)], id: 'decoy_' + d, used: false });
       }
       baseLetters.sort(() => Math.random() - 0.5);
       spellSession.poolTiles = baseLetters;
@@ -2840,69 +3097,71 @@
     function drawSpellingJungleModalDOM() {
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.spelling) ? stu.gameLevels.spelling : 1;
+      const wing = spellSession.wingOverride || (stu ? getStudentWing(stu.classGrade) : 'junior');
       const item = spellSession.currentItem;
       const body = document.getElementById('modalBody');
 
       body.innerHTML = `
-        <div style="display:flex; flex-direction:column; align-items:center; gap:16px; text-align:center;">
-          <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-            <span style="background:#14532d; color:#fff; padding:6px 16px; border-radius:999px; font-weight:800;">🦁 Jungle Level: ${lvl} (Unlimited)</span>
-            <span style="background:#0284c7; color:#fff; padding:6px 16px; border-radius:999px; font-weight:800;">📖 Word ${spellSession.subWave} of ${spellSession.maxSubWaves}</span>
-            ${lvl >= 4 ? `<span style="background:#b45309; color:#fff; padding:6px 14px; border-radius:999px; font-weight:800;">⚠️ Watch out for Extra Decoy Letters!</span>` : ''}
+        <div style="display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
+          <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+            <button class="ribbon-btn" style="background:${wing==='junior'?'#16a34a':'#334155'};" onclick="setSpellingWingOverride('junior')">🌱 Junior (Nursery–2)</button>
+            <button class="ribbon-btn" style="background:${wing==='middle'?'#2563eb':'#334155'};" onclick="setSpellingWingOverride('middle')">🚀 Middle (Class 3–5)</button>
+            <button class="ribbon-btn" style="background:${wing==='senior'?'#7c3aed':'#334155'};" onclick="setSpellingWingOverride('senior')">👑 Senior Vocab (Class 6–8)</button>
+            <button class="ribbon-btn" style="background:#0284c7;" onclick="startSpellingJungleWave(true)">🌐 Fetch Live Internet Word</button>
           </div>
 
-          <div style="background:linear-gradient(180deg,#bbf7d0,#22c55e); border:5px solid #15803d; border-radius:28px; padding:18px; width:100%; max-width:640px; box-shadow:0 10px 0 #14532d;">
-            <div style="font-size:66px; line-height:1;">${item.emoji}</div>
-            <div style="font-size:19px; font-weight:800; color:#064e3b; margin-top:8px;">Clue: ${item.hint}</div>
+          <div style="background:linear-gradient(180deg,#bbf7d0,#22c55e); border:5px solid #15803d; border-radius:28px; padding:18px; width:100%; max-width:660px; box-shadow:0 10px 0 #14532d;">
+            <div style="font-size:58px; line-height:1;">${item.emoji}</div>
+            <div style="font-size:18px; font-weight:800; color:#064e3b; margin-top:8px;">
+              ${spellSession.isLiveApiWord ? '<span style="background:#0284c7;color:#fff;padding:2px 8px;border-radius:8px;font-size:12px;">LIVE API</span> ' : ''}
+              Meaning / Clue: ${item.hint}
+            </div>
             <div style="display:flex; gap:10px; justify-content:center; margin-top:10px; flex-wrap:wrap;">
-              <button onclick="speakText('${item.word}')" class="btn-3d btn-gold" style="font-size:15px; padding:6px 18px;">
-                🔊 Speak Word Phonics
+              <button onclick="speakText('${item.word}')" class="btn-3d btn-gold" style="font-size:14.5px; padding:6px 16px;">
+                🔊 Hear Pronunciation
               </button>
-              <button onclick="giveSpellingHintLetter()" class="btn-3d btn-blue" style="font-size:15px; padding:6px 18px;">
+              <button onclick="giveSpellingHintLetter()" class="btn-3d btn-blue" style="font-size:14.5px; padding:6px 16px;">
                 💡 Reveal Next Letter
               </button>
             </div>
           </div>
 
-          <!-- Target Word Answer Boxes -->
-          <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; min-height:62px;">
+          <!-- Answer Boxes -->
+          <div style="display:flex; gap:7px; justify-content:center; flex-wrap:wrap; min-height:58px;">
             ${item.word.split('').map((_, i) => {
               const placed = spellSession.guessedTiles[i];
               return `
                 <div onclick="removeSpellingPlacedTile(${i})" title="Tap to remove letter" style="
-                  width:54px; height:58px; border-radius:14px;
+                  width:50px; height:54px; border-radius:14px;
                   background:${placed ? '#fef08a' : '#ffffff'};
                   border:4px ${placed ? 'solid #eab308' : 'dashed #0284c7'};
                   display:flex; align-items:center; justify-content:center;
-                  font-family:'Baloo 2',cursive; font-size:30px; font-weight:900;
+                  font-family:'Baloo 2',cursive; font-size:28px; font-weight:900;
                   color:#0f172a; cursor:${placed ? 'pointer' : 'default'};
-                  box-shadow:${placed ? '0 4px 0 #ca8a04' : 'none'};
-                ">
-                  ${placed ? placed.ch : ''}
-                </div>
+                ">${placed ? placed.ch : ''}</div>
               `;
             }).join('')}
           </div>
 
-          <!-- Scrambled Letter Tile Pool -->
-          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; max-width:660px;">
+          <!-- Scrambled Pool -->
+          <div style="display:flex; gap:9px; justify-content:center; flex-wrap:wrap; max-width:680px;">
             ${spellSession.poolTiles.map((tile, i) => `
               <button ${tile.used ? 'disabled' : ''} onclick="selectSpellingPoolTile(${i})" style="
-                width:58px; height:58px; border-radius:16px;
+                width:54px; height:54px; border-radius:15px;
                 background:${tile.used ? '#cbd5e1' : 'linear-gradient(180deg,#fde047,#f59e0b)'};
                 border:3px solid #fff;
                 font-family:'Baloo 2',cursive;
-                font-size:28px; font-weight:900;
+                font-size:26px; font-weight:900;
                 color:${tile.used ? '#94a3b8' : '#78350f'};
                 cursor:${tile.used ? 'default' : 'pointer'};
-                box-shadow:${tile.used ? 'none' : '0 6px 0 #b45309'};
+                box-shadow:${tile.used ? 'none' : '0 5px 0 #b45309'};
               ">${tile.ch}</button>
             `).join('')}
           </div>
 
-          <div style="display:flex; gap:12px;">
-            <button class="ribbon-btn" style="background:#ef4444; font-size:14px; padding:8px 18px;" onclick="resetCurrentSpellingTiles()">🔄 Clear Slots</button>
-            <button class="ribbon-btn" style="background:#475569; font-size:14px; padding:8px 18px;" onclick="startSpellingJungleWave()">🔀 New Word</button>
+          <div style="display:flex; gap:10px;">
+            <button class="ribbon-btn" style="background:#ef4444; font-size:13.5px; padding:7px 16px;" onclick="resetCurrentSpellingTiles()">🔄 Clear Slots</button>
+            <button class="ribbon-btn" style="background:#475569; font-size:13.5px; padding:7px 16px;" onclick="startSpellingJungleWave(false)">🔀 Shuffle Next Unique Word</button>
           </div>
         </div>
       `;
@@ -2925,16 +3184,16 @@
           speakText(item.word);
           if (spellSession.subWave < spellSession.maxSubWaves) {
             spellSession.subWave += 1;
-            showTrophyToast(`✅ Spelled ${item.word}! Next word loading...`);
-            setTimeout(() => startSpellingJungleWave(), 800);
+            showTrophyToast(`✅ Correct: ${item.word}! Loading next non-repeating word...`);
+            setTimeout(() => startSpellingJungleWave(false), 750);
           } else {
             spellSession.subWave = 1;
-            rewardStudentProgress('spelling', 15, 35, true);
-            setTimeout(() => startSpellingJungleWave(), 950);
+            rewardStudentProgress('spelling', 15, 40, true);
+            setTimeout(() => startSpellingJungleWave(false), 900);
           }
         } else {
           playTone('wrong');
-          showTrophyToast('🦁 Oops! Check the letters or tap a yellow box to fix it!');
+          showTrophyToast('🦁 Check the spelling! Tap any yellow slot to remove a wrong letter.');
         }
       }
     }
@@ -2961,34 +3220,45 @@
       if (nextIdx >= item.word.length) return;
       const neededChar = item.word[nextIdx];
       const matchIdx = spellSession.poolTiles.findIndex(t => !t.used && t.ch === neededChar);
-      if (matchIdx !== -1) {
-        selectSpellingPoolTile(matchIdx);
-      }
+      if (matchIdx !== -1) selectSpellingPoolTile(matchIdx);
     }
 
     /* ============================================================================
-       GAME 4: BRAIN TEASERS (3 UNLIMITED MODES: MEMORY + PATTERN MATRIX + ODD-ONE)
+       GAME 4: BRAIN TEASERS (4-IN-1: SLIDING PUZZLE + LIVE TRIVIA + MATRIX + MEMORY)
        ============================================================================ */
+    const offlineScienceGkBank = [
+      { q: 'Which planet in our Solar System is known as the Red Planet?', a: 'Mars', opts: ['Venus', 'Mars', 'Jupiter', 'Saturn'] },
+      { q: 'Which gas do green plants absorb from the atmosphere during photosynthesis?', a: 'Carbon Dioxide', opts: ['Oxygen', 'Carbon Dioxide', 'Nitrogen', 'Helium'] },
+      { q: 'What is the brain of a computer system called?', a: 'CPU', opts: ['RAM', 'Monitor', 'CPU', 'Keyboard'] },
+      { q: 'How many continents are there on planet Earth?', a: '7', opts: ['5', '6', '7', '8'] },
+      { q: 'Which organ in the human body pumps blood throughout the body?', a: 'Heart', opts: ['Lungs', 'Brain', 'Heart', 'Liver'] },
+      { q: 'What is the boiling point of pure water at sea level?', a: '100°C', opts: ['50°C', '90°C', '100°C', '120°C'] },
+      { q: 'Which Indian space agency launched the Chandrayaan-3 mission?', a: 'ISRO', opts: ['NASA', 'ISRO', 'DRDO', 'ESA'] },
+      { q: 'Which metal is liquid at room temperature?', a: 'Mercury', opts: ['Iron', 'Copper', 'Mercury', 'Silver'] },
+      { q: 'How many sides does a Hexagon have?', a: '6', opts: ['5', '6', '7', '8'] },
+      { q: 'Which vitamin do we get naturally from morning sunlight?', a: 'Vitamin D', opts: ['Vitamin A', 'Vitamin B', 'Vitamin C', 'Vitamin D'] },
+      { q: 'What force keeps the planets in orbit around the Sun?', a: 'Gravity', opts: ['Magnetism', 'Friction', 'Gravity', 'Electricity'] },
+      { q: 'In binary computer code, which two digits are used?', a: '0 and 1', opts: ['1 and 2', '0 and 1', '0 and 9', 'A and B'] }
+    ];
+
     let brainSession = {
-      mode: 'memory', // 'memory', 'pattern', 'oddone'
+      mode: 'memory', // 'memory', 'slide', 'series', 'trivia'
       memoryDeck: [],
       flippedCards: [],
       matchedPairs: 0,
       totalPairs: 6,
       lockBoard: false,
-      patternQ: null,
-      oddOneQ: null,
-      subSolved: 0
+      slideTiles: [1, 2, 3, 4, 5, 6, 7, 8, 0],
+      movesCount: 0,
+      seriesQ: null,
+      triviaQ: null
     };
 
-    function renderBrainTeasersGame() {
+    function renderBrainTeasersGame(forcedMode = null) {
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.brain) ? stu.gameLevels.brain : 1;
-      // Rotate or let student pick any of the 3 Brain Teaser engines
-      if (lvl % 3 === 1) brainSession.mode = 'memory';
-      else if (lvl % 3 === 2) brainSession.mode = 'pattern';
-      else brainSession.mode = 'oddone';
-
+      const modes = ['memory', 'slide', 'series', 'trivia'];
+      brainSession.mode = forcedMode || modes[(lvl - 1) % modes.length];
       launchBrainMode(brainSession.mode);
     }
 
@@ -2996,36 +3266,38 @@
       brainSession.mode = modeName;
       playTone('click');
       if (modeName === 'memory') initScalingMemoryGrid();
-      else if (modeName === 'pattern') initPatternMatrixPuzzle();
-      else initOddOneOutLogic();
+      else if (modeName === 'slide') initSlidingTilePuzzle();
+      else if (modeName === 'series') initNumberSeriesMatrix();
+      else initScienceGkTrivia(false);
     }
 
-    function getBrainModeSwitcherHTML(lvl) {
+    function getBrainNavHeaderHTML(lvl) {
       return `
         <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; width:100%; margin-bottom:6px;">
-          <span style="background:#064e3b; color:#fde047; padding:6px 14px; border-radius:999px; font-weight:900; font-size:13.5px;">🧩 Brain Level ${lvl} • ∞</span>
-          <button class="ribbon-btn" style="background:${brainSession.mode==='memory'?'#10b981':'#334155'};" onclick="launchBrainMode('memory')">🃏 Memory Flip Grid</button>
-          <button class="ribbon-btn" style="background:${brainSession.mode==='pattern'?'#10b981':'#334155'};" onclick="launchBrainMode('pattern')">🔮 Pattern Sequence</button>
-          <button class="ribbon-btn" style="background:${brainSession.mode==='oddone'?'#10b981':'#334155'};" onclick="launchBrainMode('oddone')">🕵️ Odd-One-Out IQ</button>
+          <span style="background:#064e3b; color:#fde047; padding:5px 13px; border-radius:999px; font-weight:900; font-size:13px;">🧩 Brain Level ${lvl} • ∞</span>
+          <button class="ribbon-btn" style="background:${brainSession.mode==='memory'?'#10b981':'#334155'};" onclick="launchBrainMode('memory')">🃏 Memory Matrix</button>
+          <button class="ribbon-btn" style="background:${brainSession.mode==='slide'?'#10b981':'#334155'};" onclick="launchBrainMode('slide')">🔢 3×3 Sliding Tiles</button>
+          <button class="ribbon-btn" style="background:${brainSession.mode==='series'?'#10b981':'#334155'};" onclick="launchBrainMode('series')">📐 IQ Number Series</button>
+          <button class="ribbon-btn" style="background:${brainSession.mode==='trivia'?'#10b981':'#334155'};" onclick="launchBrainMode('trivia')">🔬 Science & GK Quiz</button>
         </div>
       `;
     }
 
-    /* Mode A: Scaling Memory Pair Grid */
+    /* Brain Mode 1: Memory Matrix */
     function initScalingMemoryGrid() {
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.brain) ? stu.gameLevels.brain : 1;
       document.getElementById('modalTitle').innerHTML = `🧩 BRAIN TEASERS — Level ${lvl} Memory Matrix`;
 
-      const allIcons = ['🦁', '🐘', '🐯', '🐻', '🚀', '🌈', '🦊', '🐼', '🦄', '🦖', '🦉', '🐬'];
+      const allIcons = ['🦁', '🐘', '🐯', '🐻', '🚀', '🌈', '🦊', '🐼', '🦄', '🦖', '🦉', '🐬', '🪐', '⚡'];
       const pairCount = Math.min(8, 4 + Math.floor(lvl / 2));
       brainSession.totalPairs = pairCount;
       brainSession.matchedPairs = 0;
       brainSession.flippedCards = [];
       brainSession.lockBoard = false;
 
-      const chosenIcons = allIcons.slice(0, pairCount);
-      const deckRaw = [...chosenIcons, ...chosenIcons].sort(() => Math.random() - 0.5);
+      const shuffledIcons = [...allIcons].sort(() => Math.random() - 0.5).slice(0, pairCount);
+      const deckRaw = [...shuffledIcons, ...shuffledIcons].sort(() => Math.random() - 0.5);
       brainSession.memoryDeck = deckRaw.map((icon, i) => ({ id: i, icon, flipped: false, matched: false }));
 
       drawScalingMemoryDOM();
@@ -3034,27 +3306,22 @@
     function drawScalingMemoryDOM() {
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.brain) ? stu.gameLevels.brain : 1;
-      const cols = brainSession.totalPairs <= 4 ? 4 : 4;
       const body = document.getElementById('modalBody');
 
       body.innerHTML = `
         <div style="display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
-          ${getBrainModeSwitcherHTML(lvl)}
+          ${getBrainNavHeaderHTML(lvl)}
           <div style="font-weight:800; color:#0f172a; font-size:15px;">
-            Match all ${brainSession.totalPairs} Mascot Pairs! Progress: <strong>${brainSession.matchedPairs} / ${brainSession.totalPairs}</strong>
+            Match all ${brainSession.totalPairs} Pairs! Progress: <strong>${brainSession.matchedPairs} / ${brainSession.totalPairs}</strong>
           </div>
-          <div style="display:grid; grid-template-columns:repeat(${cols}, minmax(66px, 98px)); gap:10px; justify-content:center; background:#0f172a; padding:16px; border-radius:24px; border:4px solid #10b981; box-shadow:0 10px 0 #064e3b;">
+          <div style="display:grid; grid-template-columns:repeat(4, minmax(66px, 96px)); gap:10px; justify-content:center; background:#0f172a; padding:16px; border-radius:24px; border:4px solid #10b981;">
             ${brainSession.memoryDeck.map((card, idx) => {
               const visible = card.flipped || card.matched;
-              const bg = card.matched
-                ? 'linear-gradient(180deg,#4ade80,#16a34a)'
-                : visible
-                ? 'linear-gradient(180deg,#fde047,#f59e0b)'
-                : 'linear-gradient(180deg,#38bdf8,#2563eb)';
+              const bg = card.matched ? 'linear-gradient(180deg,#4ade80,#16a34a)' : visible ? 'linear-gradient(180deg,#fde047,#f59e0b)' : 'linear-gradient(180deg,#38bdf8,#2563eb)';
               return `
                 <button onclick="flipScalingMemoryCard(${idx})" style="
-                  height:76px; border-radius:16px; border:3px solid #fff;
-                  background:${bg}; font-size:34px; cursor:${visible ? 'default' : 'pointer'};
+                  height:74px; border-radius:16px; border:3px solid #fff;
+                  background:${bg}; font-size:32px; cursor:${visible ? 'default' : 'pointer'};
                   box-shadow:0 4px 0 rgba(0,0,0,0.4); color:#fff; font-weight:900;
                 ">${visible ? card.icon : '❓'}</button>
               `;
@@ -3078,86 +3345,169 @@
         brainSession.lockBoard = true;
         const [c1, c2] = brainSession.flippedCards;
         if (c1.icon === c2.icon) {
-          c1.matched = true;
-          c2.matched = true;
+          c1.matched = true; c2.matched = true;
           brainSession.flippedCards = [];
           brainSession.matchedPairs += 1;
           brainSession.lockBoard = false;
           playTone('win');
           drawScalingMemoryDOM();
-
           if (brainSession.matchedPairs >= brainSession.totalPairs) {
-            rewardStudentProgress('brain', 20, 40, true);
-            setTimeout(() => launchBrainMode('pattern'), 850);
+            rewardStudentProgress('brain', 20, 45, true);
+            setTimeout(() => launchBrainMode('slide'), 800);
           }
         } else {
           playTone('wrong');
           setTimeout(() => {
-            c1.flipped = false;
-            c2.flipped = false;
+            c1.flipped = false; c2.flipped = false;
             brainSession.flippedCards = [];
             brainSession.lockBoard = false;
             drawScalingMemoryDOM();
-          }, 650);
+          }, 600);
         }
       }
     }
 
-    /* Mode B: Procedural Pattern Sequence Matrix */
-    function initPatternMatrixPuzzle() {
+    /* Brain Mode 2: 3x3 Sliding Tile Number Puzzle (Solvable Scrambler) */
+    function initSlidingTilePuzzle() {
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.brain) ? stu.gameLevels.brain : 1;
-      document.getElementById('modalTitle').innerHTML = `🧩 BRAIN TEASERS — Level ${lvl} Pattern Matrix`;
+      document.getElementById('modalTitle').innerHTML = `🧩 BRAIN TEASERS — Level ${lvl} Sliding Number Grid`;
 
-      const sets = [
-        ['🌞', '🌧️', '🌈'],
-        ['🌱', '🌿', '🌳'],
-        ['🐛', '繭', '🦋'],
-        ['🔴', '🔵', '🟡'],
-        ['🦁', '🐯', '🐘'],
-        ['🚀', '🪐', '⭐']
-      ];
-      const pick = sets[Math.floor(Math.random() * sets.length)];
-      const patternRule = lvl % 3;
-      let seq = [];
-      let answer = '';
+      // Start from solved state [1,2,3,4,5,6,7,8,0] and make valid random slides so it's 100% solvable!
+      const board = [1, 2, 3, 4, 5, 6, 7, 8, 0];
+      let emptyIdx = 8;
+      const shuffleSteps = 14 + Math.min(30, lvl * 3);
+      for (let s = 0; s < shuffleSteps; s++) {
+        const neighbors = [];
+        const r = Math.floor(emptyIdx / 3), c = emptyIdx % 3;
+        if (r > 0) neighbors.push(emptyIdx - 3);
+        if (r < 2) neighbors.push(emptyIdx + 3);
+        if (c > 0) neighbors.push(emptyIdx - 1);
+        if (c < 2) neighbors.push(emptyIdx + 1);
+        const pickIdx = neighbors[Math.floor(Math.random() * neighbors.length)];
+        board[emptyIdx] = board[pickIdx];
+        board[pickIdx] = 0;
+        emptyIdx = pickIdx;
+      }
+      brainSession.slideTiles = board;
+      brainSession.movesCount = 0;
+      drawSlidingTileDOM();
+    }
 
-      if (patternRule === 0) {
-        // ABABAB?
-        seq = [pick[0], pick[1], pick[0], pick[1], pick[0]];
-        answer = pick[1];
-      } else if (patternRule === 1) {
-        // ABCABC?
-        seq = [pick[0], pick[1], pick[2], pick[0], pick[1]];
-        answer = pick[2];
+    function drawSlidingTileDOM() {
+      const stu = getLoggedStudent();
+      const lvl = (stu && stu.gameLevels.brain) ? stu.gameLevels.brain : 1;
+      const body = document.getElementById('modalBody');
+
+      body.innerHTML = `
+        <div style="display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
+          ${getBrainNavHeaderHTML(lvl)}
+          <div style="font-weight:800; font-size:15px; color:#0f172a;">
+            🔢 Arrange numbers <strong>1 to 8</strong> in order by sliding tiles into the empty space! Moves: <strong>${brainSession.movesCount}</strong>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3, 86px); gap:10px; background:#1e293b; padding:16px; border-radius:24px; border:4px solid #38bdf8; box-shadow:0 10px 0 #0f172a;">
+            ${brainSession.slideTiles.map((val, idx) => val === 0 ? `
+              <div style="width:86px; height:86px; border-radius:16px; background:rgba(255,255,255,0.08); border:2px dashed rgba(255,255,255,0.2);"></div>
+            ` : `
+              <button onclick="clickSlideTile(${idx})" style="
+                width:86px; height:86px; border-radius:16px;
+                background:${val === idx + 1 ? 'linear-gradient(180deg,#4ade80,#16a34a)' : 'linear-gradient(180deg,#fde047,#eab308)'};
+                color:${val === idx + 1 ? '#fff' : '#713f12'};
+                border:3px solid #fff; font-family:'Baloo 2',cursive; font-size:36px; font-weight:900;
+                cursor:pointer; box-shadow:0 5px 0 rgba(0,0,0,0.35);
+              ">${val}</button>
+            `).join('')}
+          </div>
+          <button class="ribbon-btn" style="background:#0284c7;" onclick="initSlidingTilePuzzle()">🔄 Reshuffle Board</button>
+        </div>
+      `;
+    }
+
+    function clickSlideTile(idx) {
+      const board = brainSession.slideTiles;
+      const emptyIdx = board.indexOf(0);
+      const r1 = Math.floor(idx / 3), c1 = idx % 3;
+      const r2 = Math.floor(emptyIdx / 3), c2 = emptyIdx % 3;
+      if (Math.abs(r1 - r2) + Math.abs(c1 - c2) !== 1) return;
+
+      playTone('click');
+      board[emptyIdx] = board[idx];
+      board[idx] = 0;
+      brainSession.movesCount += 1;
+      drawSlidingTileDOM();
+
+      const solved = [1, 2, 3, 4, 5, 6, 7, 8, 0].every((v, i) => board[i] === v);
+      if (solved) {
+        rewardStudentProgress('brain', 25, 50, true);
+        speakText('Incredible! You solved the sliding number puzzle!');
+        setTimeout(() => launchBrainMode('series'), 900);
+      }
+    }
+
+    /* Brain Mode 3: Infinite IQ Number & Pattern Series (Nursery to Class 8) */
+    function initNumberSeriesMatrix() {
+      const stu = getLoggedStudent();
+      const lvl = (stu && stu.gameLevels.brain) ? stu.gameLevels.brain : 1;
+      const wing = stu ? getStudentWing(stu.classGrade) : 'middle';
+      document.getElementById('modalTitle').innerHTML = `🧩 BRAIN TEASERS — Level ${lvl} IQ Number Series`;
+
+      let seq = [], ans = 0, ruleHint = '';
+      const patternType = Math.floor(Math.random() * 4);
+
+      if (wing === 'junior' || patternType === 0) {
+        // Constant step progression: start, start+d, start+2d...
+        const start = Math.floor(Math.random() * 10) + 2;
+        const step = Math.floor(Math.random() * 6) + 2;
+        seq = [start, start + step, start + step * 2, start + step * 3, start + step * 4];
+        ans = start + step * 5;
+        ruleHint = `💡 Hint: Add +${step} each step!`;
+      } else if (patternType === 1) {
+        // Increasing step difference: +2, +4, +6, +8, +10
+        const base = Math.floor(Math.random() * 8) + 2;
+        seq = [base, base + 2, base + 6, base + 12, base + 20];
+        ans = base + 30;
+        ruleHint = '💡 Hint: Differences grow by +2, +4, +6, +8, +10!';
+      } else if (patternType === 2) {
+        // Doubling / Geometric series
+        const start = Math.floor(Math.random() * 4) + 2;
+        seq = [start, start * 2, start * 4, start * 8];
+        ans = start * 16;
+        ruleHint = '💡 Hint: Each number doubles (×2)!';
       } else {
-        // AABBAABB?
-        seq = [pick[0], pick[0], pick[1], pick[1], pick[0]];
-        answer = pick[0];
+        // Perfect Squares Series
+        const offset = Math.floor(Math.random() * 3) + 1;
+        seq = [1, 2, 3, 4, 5].map(n => (n + offset) * (n + offset));
+        ans = (6 + offset) * (6 + offset);
+        ruleHint = '💡 Hint: Perfect Square Numbers (n²)!';
       }
 
-      const options = Array.from(new Set([answer, ...pick, '👑', '🎈'])).slice(0, 4).sort(() => Math.random() - 0.5);
-      brainSession.patternQ = { seq, answer, options };
+      const opts = new Set([ans]);
+      while (opts.size < 4) {
+        opts.add(Math.max(1, ans + (Math.floor(Math.random() * 15) - 7)));
+      }
+      const options = Array.from(opts).sort(() => Math.random() - 0.5);
+      brainSession.seriesQ = { seq, ans, ruleHint, options };
 
       const body = document.getElementById('modalBody');
       body.innerHTML = `
-        <div style="display:flex; flex-direction:column; align-items:center; gap:18px; text-align:center;">
-          ${getBrainModeSwitcherHTML(lvl)}
-          <div style="background:#0f172a; color:#fff; padding:22px; border-radius:26px; border:4px solid #38bdf8; width:100%; max-width:640px;">
-            <div style="font-size:16px; color:#bae6fd; font-weight:800; margin-bottom:12px;">
-              🔮 What comes next in the Gyanova Logic Sequence?
+        <div style="display:flex; flex-direction:column; align-items:center; gap:16px; text-align:center;">
+          ${getBrainNavHeaderHTML(lvl)}
+          <div style="background:#0f172a; color:#fff; padding:22px; border-radius:26px; border:4px solid #38bdf8; width:100%; max-width:660px;">
+            <div style="font-size:15.5px; color:#bae6fd; font-weight:800; margin-bottom:12px;">
+              📐 Find the Next Number in the IQ Sequence:
             </div>
             <div style="display:flex; gap:10px; justify-content:center; align-items:center; flex-wrap:wrap;">
-              ${seq.map(item => `
-                <div style="width:62px; height:62px; background:#1e293b; border:3px solid #64748b; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:34px;">${item}</div>
+              ${seq.map(n => `
+                <div style="min-width:60px; height:60px; padding:0 10px; background:#1e293b; border:3px solid #38bdf8; border-radius:16px; display:flex; align-items:center; justify-content:center; font-family:'Baloo 2',cursive; font-size:28px; font-weight:800;">${n}</div>
               `).join('')}
-              <div style="width:66px; height:66px; background:#fde047; color:#713f12; border:4px dashed #b45309; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:32px; font-weight:900;">?</div>
+              <div style="min-width:64px; height:64px; background:#fde047; color:#713f12; border:4px dashed #b45309; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:30px; font-weight:900;">?</div>
             </div>
+            <div style="font-size:13.5px; color:#fde047; margin-top:12px; font-weight:700;">${ruleHint}</div>
           </div>
 
           <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
             ${options.map(opt => `
-              <button onclick="checkPatternMatrixAnswer('${opt}')" style="width:82px; height:82px; border-radius:20px; background:#fff; border:4px solid #38bdf8; font-size:42px; cursor:pointer; box-shadow:0 6px 0 #0284c7;">
+              <button onclick="checkNumberSeriesAns(${opt})" style="min-width:105px; padding:12px 18px; border-radius:18px; background:linear-gradient(180deg,#fde047,#eab308); border:3px solid #fff; font-family:'Baloo 2',cursive; font-size:28px; font-weight:900; color:#713f12; cursor:pointer; box-shadow:0 6px 0 #a16207;">
                 ${opt}
               </button>
             `).join('')}
@@ -3166,108 +3516,141 @@
       `;
     }
 
-    function checkPatternMatrixAnswer(chosen) {
-      if (chosen === brainSession.patternQ.answer) {
-        rewardStudentProgress('brain', 15, 35, true);
-        setTimeout(() => initOddOneOutLogic(), 650);
+    function checkNumberSeriesAns(chosen) {
+      if (chosen === brainSession.seriesQ.ans) {
+        rewardStudentProgress('brain', 15, 40, true);
+        setTimeout(() => initScienceGkTrivia(false), 650);
       } else {
         playTone('wrong');
-        showTrophyToast('🧠 Look closely at the repeating pattern and try again!');
+        showTrophyToast('📐 Check the difference between consecutive numbers!');
       }
     }
 
-    /* Mode C: Odd-One-Out IQ Logic */
-    function initOddOneOutLogic() {
+    /* Brain Mode 4: Science, Computer & GK Trivia (Shuffle Bag + Live OpenTrivia API) */
+    async function initScienceGkTrivia(useLiveInternet = false) {
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.brain) ? stu.gameLevels.brain : 1;
-      document.getElementById('modalTitle').innerHTML = `🧩 BRAIN TEASERS — Level ${lvl} Odd-One-Out IQ`;
+      document.getElementById('modalTitle').innerHTML = `🧩 BRAIN TEASERS — Level ${lvl} Science & GK Quiz`;
 
-      const groups = [
-        { category: 'Fruits vs Vehicle', common: ['🍎', '🍌', '🍇', '🥭', '🍉'], odd: '🚗', explain: 'Car is a vehicle, others are fruits!' },
-        { category: 'Land Animals vs Sea Creature', common: ['🦁', '🐯', '🐘', '🦓', '🦒'], odd: '🐙', explain: 'Octopus lives in the ocean!' },
-        { category: 'Sky & Space vs Footwear', common: ['☀️', '🌙', '⭐', '🪐', '☄️'], odd: '👟', explain: 'Shoe belongs on your foot, not outer space!' },
-        { category: 'School Stationery vs Food', common: ['✏️', '📖', '📏', '🎒', '🖍️'], odd: '🍕', explain: 'Pizza is food, others are school supplies!' },
-        { category: 'Musical Instruments vs Tool', common: ['🎸', '🎹', '🥁', '🎺', '🎻'], odd: '🔨', explain: 'Hammer is a tool, others play music!' }
-      ];
-      const grp = groups[Math.floor(Math.random() * groups.length)];
-      const pickedCommon = grp.common.sort(() => Math.random() - 0.5).slice(0, 3);
-      const choices = [...pickedCommon, grp.odd].sort(() => Math.random() - 0.5);
-      brainSession.oddOneQ = { odd: grp.odd, explain: grp.explain, choices };
+      let qItem = null;
+      if (useLiveInternet) {
+        showTrophyToast('🌐 Fetching live Science & Computer Trivia...');
+        try {
+          const res = await fetch('https://opentdb.com/api.php?amount=1&category=17&difficulty=easy&type=multiple');
+          if (res.ok) {
+            const data = await res.json();
+            if (data.results && data.results[0]) {
+              const r = data.results[0];
+              const decodeHtml = (html) => {
+                const txt = document.createElement('textarea');
+                txt.innerHTML = html;
+                return txt.value;
+              };
+              const cleanAns = decodeHtml(r.correct_answer);
+              const cleanOpts = [...r.incorrect_answers.map(decodeHtml), cleanAns].sort(() => Math.random() - 0.5);
+              qItem = { q: decodeHtml(r.question), a: cleanAns, opts: cleanOpts, isLive: true };
+            }
+          }
+        } catch (e) {}
+      }
+
+      if (!qItem) {
+        const picked = getNextFromShuffleBag('science_gk', offlineScienceGkBank);
+        qItem = { q: picked.q, a: picked.a, opts: [...picked.opts].sort(() => Math.random() - 0.5), isLive: false };
+      }
+      brainSession.triviaQ = qItem;
 
       const body = document.getElementById('modalBody');
       body.innerHTML = `
-        <div style="display:flex; flex-direction:column; align-items:center; gap:18px; text-align:center;">
-          ${getBrainModeSwitcherHTML(lvl)}
-          <div style="background:#1e1b4b; color:#fff; padding:20px; border-radius:24px; border:4px solid #a855f7; max-width:620px; width:100%;">
-            <h3 style="font-family:'Baloo 2',cursive; font-size:24px; color:#fde047;">🕵️ Spot the Odd One Out!</h3>
-            <p style="font-size:14.5px; color:#ddd6fe; margin-top:4px;">Three of these belong in the same family. Tap the ONE that does NOT belong!</p>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:16px; text-align:center;">
+          ${getBrainNavHeaderHTML(lvl)}
+          <div style="background:linear-gradient(135deg,#1e1b4b,#312e81); color:#fff; padding:22px; border-radius:26px; border:4px solid #a855f7; width:100%; max-width:680px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:13px; color:#fde047; font-weight:800;">🔬 GYANOVA STEM & GK CHALLENGE</span>
+              <button class="ribbon-btn" style="background:#0284c7; font-size:11.5px;" onclick="initScienceGkTrivia(true)">🌐 Fetch Live Internet Question</button>
+            </div>
+            <div style="font-size:21px; font-weight:800; line-height:1.4;">${qItem.q}</div>
           </div>
-          <div style="display:grid; grid-template-columns:repeat(2, 120px); gap:16px;">
-            ${choices.map(ch => `
-              <button onclick="checkOddOneOut('${ch}')" style="height:105px; border-radius:22px; background:#fff; border:4px solid #8b5cf6; font-size:52px; cursor:pointer; box-shadow:0 7px 0 #5b21b6;">
-                ${ch}
-              </button>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px; width:100%; max-width:680px;">
+            ${qItem.opts.map((opt, idx) => `
+              <button onclick="checkScienceGkAnswer(${idx})" style="
+                background:#ffffff; border:3px solid #8b5cf6; border-radius:16px;
+                padding:14px; font-family:inherit; font-size:16px; font-weight:800;
+                color:#0f172a; cursor:pointer; box-shadow:0 5px 0 #5b21b6;
+              ">${opt}</button>
             `).join('')}
           </div>
         </div>
       `;
     }
 
-    function checkOddOneOut(chosen) {
-      if (chosen === brainSession.oddOneQ.odd) {
-        showTrophyToast(`🎯 Spot On! ${brainSession.oddOneQ.explain}`);
-        rewardStudentProgress('brain', 15, 35, true);
-        setTimeout(() => initScalingMemoryGrid(), 800);
+    function checkScienceGkAnswer(idx) {
+      const chosen = brainSession.triviaQ.opts[idx];
+      if (chosen === brainSession.triviaQ.a) {
+        rewardStudentProgress('brain', 15, 40, true);
+        speakText('Correct answer! Brilliant knowledge!');
+        setTimeout(() => initScienceGkTrivia(false), 700);
       } else {
         playTone('wrong');
-        showTrophyToast('🕵️ Think about which 3 items are in the same group!');
+        showTrophyToast('🔬 Not quite! Think carefully and try another option!');
       }
     }
 
     /* ============================================================================
-       GAME 5: STORY WORLD (INFINITE PROCEDURAL FABLE GENERATOR + QUIZ QUESTS)
+       GAME 5: STORY WORLD (COMBINATORIAL NON-REPEATING STORIES FOR NURSERY–CLASS 8)
        ============================================================================ */
-    const storyHeroes = [
-      { name: 'Sheru the Brave Lion Cub', art: '🦁👑', home: 'Golden Savannah near Gyanova Hills' },
-      { name: 'Gaju the Curious Baby Elephant', art: '🐘🌈', home: 'Emerald Bamboo Forest' },
-      { name: 'Tara the Starlight Owl', art: '🦉🌙', home: 'Ancient Banyan Library Tree' },
-      { name: 'Mithu the Clever Sky Parrot', art: '🦜🌳', home: 'Rainbow Mango Orchard' },
-      { name: 'Chiku the Speedy Rabbit', art: '🐰🥕', home: 'Sunlight Meadow Valley' },
-      { name: 'Neel the Ocean Dolphin', art: '🐬🌊', home: 'Sparkling Coral Lagoon' }
+    const storyCharacters = [
+      { name: 'Aarav the Young Astronomer', art: '🔭🌟', setting: 'Gyanova Rooftop Observatory' },
+      { name: 'Meera the Eco-Inventor', art: '🌱⚡', setting: 'Solar Innovation Lab' },
+      { name: 'Kabir the Brave Mountaineer', art: '🏔️🧭', setting: 'Himalayan Snow Valley' },
+      { name: 'Sheru the Wise Jungle Guardian', art: '🦁🌳', setting: 'Emerald Banyan Sanctuary' },
+      { name: 'Nidhi the Gentle Healer', art: '🐮🌸', setting: 'Sunlight River Meadow' },
+      { name: 'Rohan the Robotics Captain', art: '🤖🚀', setting: 'National Science Olympiad Arena' },
+      { name: 'Tara the Deep-Sea Explorer', art: '🐬🌊', setting: 'Indian Ocean Coral Reef' },
+      { name: 'Vikram the Ancient Historian', art: '📜🏛️', setting: 'Nalanda Heritage Library' }
     ];
 
-    const storyPlots = [
+    const storyMissions = [
       {
-        event: 'discovered a glowing golden compass buried beneath the school playground that pointed toward whoever needed help the most.',
-        action: 'shared water, books, and warm food with a lost traveler instead of keeping the treasure alone.',
-        moral: 'True greatness comes from helping others without expecting a reward.',
-        quizQ: 'What did the hero do when someone needed help?',
-        correctOpt: 'Shared kindness and helped right away',
-        wrongOpts: ['Hid the compass under a rock', 'Went to sleep all afternoon']
+        conflict: 'noticed that the village water pump stopped working right before the summer harvest.',
+        resolution: 'designed a clever wind-powered pulley with classmates so clean water flowed to every field without wasting electricity.',
+        moral: 'Scientific thinking combined with community service can transform lives.',
+        quizQ: 'How was the village water crisis solved?',
+        ans: 'By building a wind-powered pulley as a team',
+        wrongs: ['By waiting for winter', 'By abandoning the fields']
       },
       {
-        event: 'wanted to build a solar-powered bridge across the rushing river so every young student could reach class safely during the monsoon.',
-        action: 'organized all the forest friends into a team where everyone contributed their best skill.',
-        moral: 'Teamwork and patience can solve even the biggest challenges.',
-        quizQ: 'How was the river bridge successfully built?',
-        correctOpt: 'By working together as a united team',
-        wrongOpts: ['By waiting for magic clouds', 'By giving up on the first day']
+        conflict: 'discovered an injured migratory bird that had lost its flock during a fierce thunderstorm.',
+        resolution: 'built a warm shelter, cared for its wings patiently for seven days, and helped it reunite with its flock at sunrise.',
+        moral: 'Compassion toward every living creature is the highest mark of education.',
+        quizQ: 'What quality did the protagonist show toward the injured bird?',
+        ans: 'Patience, care, and kindness until it healed',
+        wrongs: ['Locked it in a cage forever', 'Ignored it during the storm']
       },
       {
-        event: 'entered the Grand Science & Storytelling Fair at Gyanova Heights School, nervous about speaking in front of everyone.',
-        action: 'practiced diligently every morning, took a deep breath, and spoke with honesty and courage.',
-        moral: 'Daily practice turns fear into confidence and wisdom.',
-        quizQ: 'What helped the hero succeed at the Grand School Fair?',
-        correctOpt: 'Daily practice and honest courage',
-        wrongOpts: ['Skipping practice to play', 'Copying someone else']
+        conflict: 'found an ancient mathematical riddle carved on a stone tablet that nobody had solved for centuries.',
+        resolution: 'used algebra, pattern logic, and teamwork instead of guessing hastily, unlocking a vault of historical manuscripts.',
+        moral: 'Patience and logical reasoning unlock mysteries that haste cannot.',
+        quizQ: 'What helped unlock the ancient stone riddle?',
+        ans: 'Logical reasoning and calm teamwork',
+        wrongs: ['Breaking the stone with a hammer', 'Guessing randomly without thinking']
       },
       {
-        event: 'found a magical seed that only sprouted when someone spoke polite words and told the truth.',
-        action: 'watered the plant daily while speaking kindly to parents, teachers, and classmates.',
-        moral: 'Truthfulness and gentle words make the whole world blossom.',
-        quizQ: 'What made the magical seed grow into a giant tree?',
-        correctOpt: 'Truthfulness and kind words every day',
-        wrongOpts: ['Shouting loudly at the seed', 'Keeping it in a dark box']
+        conflict: 'saw younger students struggling to cross a muddy path on their way to morning assembly.',
+        resolution: 'organized volunteers to lay stepping stones and planted tree saplings along the path to hold the soil firmly.',
+        moral: 'True leaders take initiative to make the path easier for others.',
+        quizQ: 'Why did the volunteers plant tree saplings along the path?',
+        ans: 'To hold the soil firmly and help everyone walk safely',
+        wrongs: ['To block the road completely', 'To hide their textbooks']
+      },
+      {
+        conflict: 'faced a sudden power outage right before the final coding presentation at the inter-school tech fest.',
+        resolution: 'stayed calm, explained the algorithm clearly on a chalkboard with diagrams, and won first prize for deep understanding.',
+        moral: 'When you truly understand your subject, no obstacle can stop you.',
+        quizQ: 'Why did the presentation win first prize despite the power cut?',
+        ans: 'Because deep conceptual understanding shone through on the chalkboard',
+        wrongs: ['Because the judges cancelled the event', 'Because everyone went home early']
       }
     ];
 
@@ -3276,70 +3659,62 @@
     function renderStoryWorldGame() {
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.story) ? stu.gameLevels.story : 1;
-      document.getElementById('modalTitle').innerHTML = `📖 STORY WORLD — Chapter ${lvl} Interactive Book`;
+      document.getElementById('modalTitle').innerHTML = `📖 STORY WORLD — Chapter ${lvl} (Nursery–Class 8th Reader)`;
 
-      const hero = storyHeroes[(lvl - 1) % storyHeroes.length];
-      const plot = storyPlots[(lvl + Math.floor((lvl - 1) / storyHeroes.length)) % storyPlots.length];
+      const charPick = getNextFromShuffleBag('story_chars', storyCharacters);
+      const missionPick = getNextFromShuffleBag('story_missions', storyMissions);
 
-      const fullTitle = `Chapter ${lvl}: ${hero.name} of ${hero.home}`;
-      const fullParagraph = `In the heart of the ${hero.home}, ${hero.name} ${plot.event} Instead of worrying, ${hero.name} ${plot.action} Soon, the entire valley celebrated this noble deed!`;
-      const options = [plot.correctOpt, ...plot.wrongOpts].sort(() => Math.random() - 0.5);
+      const title = `Chapter ${lvl}: ${charPick.name} at the ${charPick.setting}`;
+      const bodyText = `At the ${charPick.setting}, ${charPick.name} ${missionPick.conflict} Showing remarkable presence of mind, ${charPick.name} ${missionPick.resolution} Everyone at Gyanova Heights School applauded this inspiring example!`;
+      const options = [missionPick.ans, ...missionPick.wrongs].sort(() => Math.random() - 0.5);
 
       activeStoryQuiz = {
-        title: fullTitle,
-        text: fullParagraph,
-        moral: plot.moral,
-        quizQ: plot.quizQ,
-        correctOpt: plot.correctOpt,
+        title,
+        text: bodyText,
+        moral: missionPick.moral,
+        quizQ: missionPick.quizQ,
+        ans: missionPick.ans,
         options
       };
 
       const body = document.getElementById('modalBody');
       body.innerHTML = `
         <div style="display:flex; flex-direction:column; align-items:center; gap:14px;">
-          <div style="font-family:'Baloo 2',cursive; font-size:22px; font-weight:800; color:#9a3412; text-align:center;">
-            📚 ${fullTitle} (Unlimited Story Chapters)
+          <div style="font-family:'Baloo 2',cursive; font-size:21px; font-weight:800; color:#9a3412; text-align:center;">
+            📚 ${title}
           </div>
 
-          <!-- Open Illustrated Book -->
-          <div style="display:grid; grid-template-columns:1fr 1.25fr; width:100%; max-width:780px; background:#fffbeb; border:6px solid #b45309; border-radius:24px; overflow:hidden; box-shadow:0 10px 0 #78350f;">
+          <div style="display:grid; grid-template-columns:1fr 1.35fr; width:100%; max-width:780px; background:#fffbeb; border:6px solid #b45309; border-radius:24px; overflow:hidden; box-shadow:0 10px 0 #78350f;">
             <div style="padding:18px; border-right:3px dashed #d97706; background:linear-gradient(180deg,#bae6fd 0%,#dcfce7 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; text-align:center;">
-              <div style="font-size:66px;">${hero.art}</div>
-              <div style="background:#fff; padding:6px 14px; border-radius:999px; font-weight:800; font-size:13px; color:#0369a1; border:2px solid #38bdf8;">
-                ${hero.home}
+              <div style="font-size:64px;">${charPick.art}</div>
+              <div style="background:#fff; padding:5px 12px; border-radius:999px; font-weight:800; font-size:12.5px; color:#0369a1; border:2px solid #38bdf8;">
+                ${charPick.setting}
               </div>
-              <button class="btn-3d btn-purple" style="font-size:15px; padding:7px 16px;" onclick="speakCurrentStoryAloud()">
-                🔊 Read Story Aloud
+              <button class="btn-3d btn-purple" style="font-size:14.5px; padding:6px 15px;" onclick="speakCurrentStoryAloud()">
+                🔊 Voice Narrator
               </button>
             </div>
             <div style="padding:20px; display:flex; flex-direction:column; justify-content:space-between;">
-              <p style="font-size:16.5px; line-height:1.55; font-weight:700; color:#1e293b;">
-                "${fullParagraph}"
+              <p style="font-size:16px; line-height:1.58; font-weight:700; color:#1e293b;">
+                "${bodyText}"
               </p>
               <div style="margin-top:12px; background:#fef3c7; border-left:5px solid #f59e0b; padding:8px 12px; border-radius:8px; font-size:13.5px; font-weight:800; color:#92400e;">
-                🌟 Moral: ${plot.moral}
+                🌟 Key Takeaway: ${missionPick.moral}
               </div>
             </div>
           </div>
 
-          <!-- Interactive Comprehension Quiz to Earn Chapter XP -->
           <div style="background:#ffffff; border:3px solid #cbd5e1; border-radius:20px; padding:14px 18px; width:100%; max-width:780px;">
-            <div style="font-weight:900; font-size:15.5px; color:#1e3a8a; margin-bottom:10px;">
-              ❓ Story Comprehension Quest: ${plot.quizQ}
+            <div style="font-weight:900; font-size:15px; color:#1e3a8a; margin-bottom:10px;">
+              ❓ Reading Comprehension Quest: ${missionPick.quizQ}
             </div>
             <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:10px;">
               ${options.map((opt, idx) => `
                 <button onclick="answerStoryQuiz(${idx})" style="
                   background:linear-gradient(180deg,#f8fafc,#e2e8f0);
-                  border:3px solid #94a3b8;
-                  border-radius:14px;
-                  padding:10px 12px;
-                  font-family:inherit;
-                  font-size:14px;
-                  font-weight:800;
-                  color:#0f172a;
-                  cursor:pointer;
-                  text-align:left;
+                  border:3px solid #94a3b8; border-radius:14px; padding:10px 12px;
+                  font-family:inherit; font-size:14px; font-weight:800; color:#0f172a;
+                  cursor:pointer; text-align:left;
                 ">🔹 ${opt}</button>
               `).join('')}
             </div>
@@ -3350,64 +3725,93 @@
 
     function speakCurrentStoryAloud() {
       if (!activeStoryQuiz) return;
-      speakText(`${activeStoryQuiz.title}. ${activeStoryQuiz.text} Moral of the story: ${activeStoryQuiz.moral}`);
+      speakText(`${activeStoryQuiz.title}. ${activeStoryQuiz.text} Moral: ${activeStoryQuiz.moral}`);
     }
 
     function answerStoryQuiz(optIndex) {
       if (!activeStoryQuiz) return;
-      const chosen = activeStoryQuiz.options[optIndex];
-      if (chosen === activeStoryQuiz.correctOpt) {
-        rewardStudentProgress('story', 15, 35, true);
-        speakText('Wonderful reading comprehension! Next chapter unlocked!');
-        setTimeout(() => renderStoryWorldGame(), 850);
+      if (activeStoryQuiz.options[optIndex] === activeStoryQuiz.ans) {
+        rewardStudentProgress('story', 15, 40, true);
+        speakText('Spot on! Unlocking the next unique story chapter!');
+        setTimeout(() => renderStoryWorldGame(), 800);
       } else {
         playTone('wrong');
-        showTrophyToast('📖 Read the story paragraph again and pick the best answer!');
+        showTrophyToast('📖 Re-read the passage carefully and pick the right answer!');
       }
     }
 
     /* ============================================================================
-       GAME 6: TYPING CHAMP (UNLIMITED SPEED WAVES + COMBO MULTIPLIER + WPM)
+       GAME 6: TYPING CHAMP (CLASSIC SPEED KEYBOARD + FALLING METEOR WORDS ARCADE)
        ============================================================================ */
-    const typingWaveBank = [
-      'STAR', 'LION', 'BOOK', 'MATH', 'CODE', 'PLAY', 'TREE', 'GOLD',
-      'GYANOVA', 'HEIGHTS', 'SCHOOL', 'SCIENCE', 'RAINBOW', 'CHAMPION',
-      'JUNGLE', 'WIZARD', 'PUZZLE', 'ROCKET', 'PLANET', 'VICTORY',
-      'KNOWLEDGE', 'BRILLIANT', 'ADVENTURE', 'DISCOVERY', 'EXCELLENCE'
+    const typingWordsBag = [
+      'STAR', 'LION', 'BOOK', 'MATH', 'CODE', 'PLAY', 'TREE', 'GOLD', 'ATOM', 'MARS',
+      'GYANOVA', 'HEIGHTS', 'SCHOOL', 'SCIENCE', 'RAINBOW', 'CHAMPION', 'ALGEBRA',
+      'JUNGLE', 'WIZARD', 'PUZZLE', 'ROCKET', 'PLANET', 'VICTORY', 'GRAVITY', 'PHYSICS',
+      'KNOWLEDGE', 'BRILLIANT', 'ADVENTURE', 'DISCOVERY', 'EXCELLENCE', 'TECHNOLOGY'
     ];
 
     let typingState = {
+      arcadeMode: 'meteor', // 'meteor' or 'classic'
       subWord: 1,
       maxSubWords: 4,
       targetWord: 'GYANOVA',
       charIdx: 0,
       combo: 0,
-      mistakes: 0,
-      startTime: Date.now()
+      meteorY: 12,
+      meteorX: 50,
+      meteorBlasted: 0,
+      meteorGoal: 5
     };
 
-    function renderTypingChampGame() {
+    function renderTypingChampGame(selectedMode = 'meteor') {
+      clearAllGameTimers();
+      typingState.arcadeMode = selectedMode;
       typingState.subWord = 1;
       typingState.combo = 0;
-      typingState.mistakes = 0;
-      typingState.startTime = Date.now();
-      loadNextTypingWaveWord();
+      typingState.meteorBlasted = 0;
+
+      if (selectedMode === 'meteor') {
+        startFallingMeteorArcade();
+      } else {
+        loadNextTypingWaveWord();
+      }
     }
 
-    function loadNextTypingWaveWord() {
+    function startFallingMeteorArcade() {
+      clearAllGameTimers();
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.typing) ? stu.gameLevels.typing : 1;
-      document.getElementById('modalTitle').innerHTML = `⌨️ TYPING CHAMP — Level ${lvl} (Wave ${typingState.subWord}/${typingState.maxSubWords})`;
+      document.getElementById('modalTitle').innerHTML = `⌨️ TYPING CHAMP — Level ${lvl} Falling Meteor Defense`;
 
-      const maxIdx = Math.min(typingWaveBank.length, 6 + lvl * 2);
-      const pool = typingWaveBank.slice(0, maxIdx);
-      typingState.targetWord = pool[Math.floor(Math.random() * pool.length)];
-      typingState.charIdx = 0;
+      spawnNewMeteorWord();
+      drawMeteorArcadeDOM();
 
-      drawTypingChampModalDOM();
+      const speedStep = Math.min(2.2, 0.75 + lvl * 0.12);
+      const timerId = setInterval(() => {
+        typingState.meteorY += speedStep;
+        const meteorEl = document.getElementById('activeMeteorNode');
+        if (meteorEl) {
+          meteorEl.style.top = `${typingState.meteorY}%`;
+        }
+        if (typingState.meteorY >= 84) {
+          // Meteor hit ground -> reset word from top
+          playTone('wrong');
+          typingState.combo = 0;
+          spawnNewMeteorWord();
+          drawMeteorArcadeDOM();
+        }
+      }, 60);
+      activeTimers.push(timerId);
     }
 
-    function drawTypingChampModalDOM() {
+    function spawnNewMeteorWord() {
+      typingState.targetWord = getNextFromShuffleBag('typing_bag', typingWordsBag);
+      typingState.charIdx = 0;
+      typingState.meteorY = 8;
+      typingState.meteorX = 22 + Math.floor(Math.random() * 56);
+    }
+
+    function drawMeteorArcadeDOM() {
       const stu = getLoggedStudent();
       const lvl = (stu && stu.gameLevels.typing) ? stu.gameLevels.typing : 1;
       const rows = [
@@ -3416,56 +3820,99 @@
         ['Z','X','C','V','B','N','M']
       ];
       const nextChar = typingState.targetWord[typingState.charIdx] || '';
+      const typedPart = typingState.targetWord.slice(0, typingState.charIdx);
+      const remainPart = typingState.targetWord.slice(typingState.charIdx);
 
       const body = document.getElementById('modalBody');
       body.innerHTML = `
-        <div style="display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
-          <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-            <span style="background:#4c1d95; color:#fff; padding:6px 16px; border-radius:999px; font-weight:800;">⌨️ Typing Level: ${lvl} • ∞</span>
-            <span style="background:#0284c7; color:#fff; padding:6px 16px; border-radius:999px; font-weight:800;">⚡ Word: ${typingState.subWord}/${typingState.maxSubWords}</span>
-            <span style="background:#ca8a04; color:#fff; padding:6px 16px; border-radius:999px; font-weight:800;">🔥 Combo: ${typingState.combo}x</span>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center;">
+          <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+            <button class="ribbon-btn" style="background:#7c3aed;" onclick="renderTypingChampGame('meteor')">☄️ Falling Meteor Arcade</button>
+            <button class="ribbon-btn" style="background:#334155;" onclick="renderTypingChampGame('classic')">⌨️ Classic Speed Wave</button>
+            <span style="background:#14532d; color:#fff; padding:5px 14px; border-radius:999px; font-weight:800; font-size:13px;">💥 Blasted: ${typingState.meteorBlasted}/${typingState.meteorGoal}</span>
+            <span style="background:#ca8a04; color:#fff; padding:5px 14px; border-radius:999px; font-weight:800; font-size:13px;">🔥 Combo: ${typingState.combo}x</span>
           </div>
 
-          <div style="background:radial-gradient(circle,#581c87,#1e1b4b); width:100%; max-width:680px; padding:20px; border-radius:26px; border:4px solid #c084fc; box-shadow:0 10px 0 #3b0764; color:#fff;">
-            <div style="font-size:14px; color:#e9d5ff; font-weight:800; margin-bottom:10px;">
-              Type the glowing yellow letter on your keyboard or tap the keys below!
+          <div class="meteor-arena">
+            <div id="activeMeteorNode" class="falling-meteor" style="top:${typingState.meteorY}%; left:${typingState.meteorX}%;">
+              ☄️ <span style="color:#16a34a;">${typedPart}</span><span>${remainPart}</span>
             </div>
+            <div style="position:absolute; bottom:0; left:0; right:0; height:24px; background:linear-gradient(90deg,#ef4444,#f97316,#ef4444); color:#fff; font-size:11.5px; font-weight:900; display:flex; align-items:center; justify-content:center;">
+              🛡️ GYANOVA LASER SHIELD — TYPE THE METEOR WORD BEFORE IT LANDS!
+            </div>
+          </div>
+
+          <div style="background:#cbd5e1; padding:12px; border-radius:22px; border:4px solid #fff; display:flex; flex-direction:column; gap:6px; width:100%; max-width:680px;">
+            ${rows.map(row => `
+              <div style="display:flex; justify-content:center; gap:5px; flex-wrap:wrap;">
+                ${row.map(k => {
+                  const isTarget = k === nextChar;
+                  return `
+                    <button onclick="processTypingChampKey('${k}')" style="
+                      min-width:44px; height:42px; border-radius:10px;
+                      background:${isTarget ? 'linear-gradient(180deg,#fde047,#f59e0b)' : '#ffffff'};
+                      color:${isTarget ? '#78350f' : '#1e293b'};
+                      border:2px solid ${isTarget ? '#b45309' : '#94a3b8'};
+                      font-family:'Baloo 2',cursive; font-size:19px; font-weight:900;
+                      cursor:pointer; box-shadow:0 3px 0 ${isTarget ? '#b45309' : '#94a3b8'};
+                    ">${k}</button>
+                  `;
+                }).join('')}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function loadNextTypingWaveWord() {
+      const stu = getLoggedStudent();
+      const lvl = (stu && stu.gameLevels.typing) ? stu.gameLevels.typing : 1;
+      document.getElementById('modalTitle').innerHTML = `⌨️ TYPING CHAMP — Level ${lvl} Classic Wave (${typingState.subWord}/${typingState.maxSubWords})`;
+      typingState.targetWord = getNextFromShuffleBag('typing_bag', typingWordsBag);
+      typingState.charIdx = 0;
+      drawClassicTypingDOM();
+    }
+
+    function drawClassicTypingDOM() {
+      const rows = [
+        ['Q','W','E','R','T','Y','U','I','O','P'],
+        ['A','S','D','F','G','H','J','K','L'],
+        ['Z','X','C','V','B','N','M']
+      ];
+      const nextChar = typingState.targetWord[typingState.charIdx] || '';
+      const body = document.getElementById('modalBody');
+
+      body.innerHTML = `
+        <div style="display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
+          <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+            <button class="ribbon-btn" style="background:#334155;" onclick="renderTypingChampGame('meteor')">☄️ Switch to Meteor Arcade</button>
+            <button class="ribbon-btn" style="background:#7c3aed;" onclick="renderTypingChampGame('classic')">⌨️ Classic Speed Wave</button>
+          </div>
+          <div style="background:radial-gradient(circle,#581c87,#1e1b4b); width:100%; max-width:680px; padding:20px; border-radius:26px; border:4px solid #c084fc; color:#fff;">
             <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
               ${typingState.targetWord.split('').map((ch, idx) => {
                 const done = idx < typingState.charIdx;
                 const current = idx === typingState.charIdx;
                 return `
                   <div style="
-                    width:50px; height:56px; border-radius:14px;
+                    width:48px; height:54px; border-radius:14px;
                     background:${done ? '#22c55e' : current ? '#fde047' : 'rgba(255,255,255,0.15)'};
                     color:${done ? '#fff' : current ? '#1e1b4b' : '#cbd5e1'};
                     border:3px solid ${current ? '#fff' : 'rgba(255,255,255,0.35)'};
                     display:flex; align-items:center; justify-content:center;
-                    font-family:'Baloo 2',cursive; font-size:30px; font-weight:900;
-                    transform:${current ? 'scale(1.12)' : 'scale(1)'};
+                    font-family:'Baloo 2',cursive; font-size:28px; font-weight:900;
                   ">${ch}</div>
                 `;
               }).join('')}
             </div>
           </div>
-
-          <!-- Interactive On-Screen Keyboard -->
-          <div style="background:#cbd5e1; padding:14px; border-radius:24px; border:4px solid #fff; box-shadow:0 8px 0 #64748b; display:flex; flex-direction:column; gap:7px; width:100%; max-width:680px;">
+          <div style="background:#cbd5e1; padding:14px; border-radius:24px; border:4px solid #fff; display:flex; flex-direction:column; gap:7px; width:100%; max-width:680px;">
             ${rows.map(row => `
               <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap;">
                 ${row.map(k => {
                   const isTarget = k === nextChar;
-                  return `
-                    <button onclick="processTypingChampKey('${k}')" style="
-                      min-width:46px; height:46px; border-radius:10px;
-                      background:${isTarget ? 'linear-gradient(180deg,#fde047,#f59e0b)' : '#ffffff'};
-                      color:${isTarget ? '#78350f' : '#1e293b'};
-                      border:2px solid ${isTarget ? '#b45309' : '#94a3b8'};
-                      font-family:'Baloo 2',cursive; font-size:20px; font-weight:900;
-                      cursor:pointer;
-                      box-shadow:0 4px 0 ${isTarget ? '#b45309' : '#94a3b8'};
-                    ">${k}</button>
-                  `;
+                  return `<button onclick="processTypingChampKey('${k}')" style="min-width:45px; height:45px; border-radius:10px; background:${isTarget ? '#fde047' : '#fff'}; font-family:'Baloo 2',cursive; font-size:19px; font-weight:900; cursor:pointer;">${k}</button>`;
                 }).join('')}
               </div>
             `).join('')}
@@ -3482,23 +3929,34 @@
         playTone('click');
         typingState.charIdx += 1;
         typingState.combo += 1;
-        drawTypingChampModalDOM();
 
-        if (typingState.charIdx >= typingState.targetWord.length) {
-          playTone('win');
-          speakText(typingState.targetWord);
-          if (typingState.subWord < typingState.maxSubWords) {
-            typingState.subWord += 1;
-            setTimeout(() => loadNextTypingWaveWord(), 550);
-          } else {
-            typingState.subWord = 1;
-            rewardStudentProgress('typing', 15, 35, true);
-            setTimeout(() => loadNextTypingWaveWord(), 750);
+        if (typingState.arcadeMode === 'meteor') {
+          if (typingState.charIdx >= typingState.targetWord.length) {
+            playTone('win');
+            typingState.meteorBlasted += 1;
+            if (typingState.meteorBlasted >= typingState.meteorGoal) {
+              typingState.meteorBlasted = 0;
+              rewardStudentProgress('typing', 20, 45, true);
+            }
+            spawnNewMeteorWord();
+          }
+          drawMeteorArcadeDOM();
+        } else {
+          drawClassicTypingDOM();
+          if (typingState.charIdx >= typingState.targetWord.length) {
+            playTone('win');
+            if (typingState.subWord < typingState.maxSubWords) {
+              typingState.subWord += 1;
+              setTimeout(() => loadNextTypingWaveWord(), 450);
+            } else {
+              typingState.subWord = 1;
+              rewardStudentProgress('typing', 15, 35, true);
+              setTimeout(() => loadNextTypingWaveWord(), 650);
+            }
           }
         }
       } else {
         typingState.combo = 0;
-        typingState.mistakes += 1;
         playTone('wrong');
       }
     }
@@ -3514,7 +3972,117 @@
     });
 
     /* ============================================================================
-       STUDENT PROFILE, TOP CHAMPIONS, HOMEWORK & SCHOOL SHOWCASE MODALS
+       🛍️ STAR SHOP & 🎓 OFFICIAL PRINTABLE MERIT CERTIFICATE GENERATOR
+       ============================================================================ */
+    function renderStarShopModal() {
+      const stu = getLoggedStudent();
+      if (!stu) return;
+      normalizeStudentObject(stu);
+      document.getElementById('modalTitle').innerHTML = '🛍️ GYANOVA STAR SHOP — Titles & Glowing Frames';
+
+      const body = document.getElementById('modalBody');
+      body.innerHTML = `
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="background:linear-gradient(90deg,#1e1b4b,#4c1d95); color:#fff; padding:16px 22px; border-radius:22px; border:3px solid #fde047; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <div>
+              <div style="font-family:'Baloo 2',cursive; font-size:24px; color:#fde047;">⭐ Your Star Wallet: ${stu.stars} Stars</div>
+              <div style="font-size:13.5px; color:#e9d5ff;">Unlock custom titles and glowing avatar borders for your profile!</div>
+            </div>
+            <button class="btn-3d btn-gold" style="font-size:15px;" onclick="openGameModal('certificate')">🎓 View My Merit Certificate</button>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:14px;">
+            ${STAR_SHOP_ITEMS.map(item => {
+              const owned = stu.ownedItems.includes(item.id);
+              const isEquipped = (item.type === 'title' && stu.equippedTitle === item.label) || (item.type === 'frame' && stu.equippedFrame === item.css);
+              return `
+                <div style="background:#fff; border:3px solid ${isEquipped ? '#22c55e' : owned ? '#38bdf8' : '#cbd5e1'}; border-radius:20px; padding:16px; display:flex; flex-direction:column; justify-content:space-between; gap:10px;">
+                  <div>
+                    <div style="font-family:'Baloo 2',cursive; font-size:19px; color:#0f172a;">${item.label}</div>
+                    <div style="font-size:13px; color:#64748b; font-weight:700; margin-top:4px;">${item.desc}</div>
+                  </div>
+                  ${isEquipped ? `
+                    <button disabled style="background:#22c55e; color:#fff; border:none; padding:9px; border-radius:12px; font-weight:900;">✅ EQUIPPED</button>
+                  ` : owned ? `
+                    <button onclick="buyOrEquipShopItem('${item.id}')" style="background:#2563eb; color:#fff; border:none; padding:9px; border-radius:12px; font-weight:900; cursor:pointer;">✨ Equip Now</button>
+                  ` : `
+                    <button onclick="buyOrEquipShopItem('${item.id}')" style="background:linear-gradient(180deg,#fde047,#eab308); color:#713f12; border:2px solid #b45309; padding:9px; border-radius:12px; font-weight:900; cursor:pointer;">🛒 Unlock for ⭐ ${item.cost}</button>
+                  `}
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function buyOrEquipShopItem(itemId) {
+      const stu = getLoggedStudent();
+      if (!stu) return;
+      normalizeStudentObject(stu);
+      const item = STAR_SHOP_ITEMS.find(x => x.id === itemId);
+      if (!item) return;
+
+      if (!stu.ownedItems.includes(item.id)) {
+        if (stu.stars < item.cost) {
+          playTone('wrong');
+          showTrophyToast(`⚠️ You need ⭐ ${item.cost} Stars to unlock ${item.label}! Play games to earn more!`);
+          return;
+        }
+        stu.stars -= item.cost;
+        stu.ownedItems.push(item.id);
+      }
+
+      if (item.type === 'title') stu.equippedTitle = item.label;
+      if (item.type === 'frame') stu.equippedFrame = item.css;
+
+      savePortalState();
+      renderDashboardUI();
+      renderStarShopModal();
+      playTone('win');
+      showTrophyToast(`🎉 Equipped ${item.label}!`);
+      autoPushCloudIfConfigured();
+    }
+
+    function renderMeritCertificateModal() {
+      const stu = getLoggedStudent();
+      if (!stu) return;
+      normalizeStudentObject(stu);
+      const overallLvl = Math.floor(stu.xp / 100) + 1;
+      const dateStr = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+
+      document.getElementById('modalTitle').innerHTML = '🎓 OFFICIAL SCHOOL MERIT CERTIFICATE';
+      document.getElementById('modalBody').innerHTML = `
+        <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+          <div id="printableCertificate" style="width:100%; max-width:780px; background:linear-gradient(135deg,#fffbeb 0%,#ffffff 50%,#fef3c7 100%); border:10px double #b45309; border-radius:24px; padding:32px 28px; text-align:center; box-shadow:0 12px 30px rgba(0,0,0,0.18); position:relative;">
+            <div style="font-size:13px; font-weight:900; color:#b45309; letter-spacing:2px;">• OFFICIAL DIGITAL MERIT AWARD •</div>
+            <h2 style="font-family:'Baloo 2',cursive; font-size:34px; color:#1e1b4b; margin-top:4px;">GYANOVA HEIGHTS SCHOOL</h2>
+            <div style="font-size:13px; font-weight:800; color:#0369a1; margin-bottom:16px;">NURSERY TO CLASS 8TH • SMART LEARNING PORTAL</div>
+
+            <div style="font-size:16px; color:#475569; font-weight:700;">This Certificate of Excellence is proudly presented to</div>
+            <div style="font-family:'Baloo 2',cursive; font-size:36px; font-weight:800; color:#d97706; border-bottom:3px solid #f59e0b; display:inline-block; padding:0 24px; margin:8px 0;">
+              ${stu.avatar} ${stu.name.toUpperCase()} (${stu.classGrade})
+            </div>
+            <div style="font-size:14px; font-weight:900; color:#6d28d9; margin-bottom:12px;">Title Achieved: ${stu.equippedTitle}</div>
+
+            <p style="font-size:15px; color:#334155; font-weight:700; max-width:600px; margin:0 auto; line-height:1.5;">
+              For outstanding dedication across Mathematics, English Vocabulary, Logic Puzzles, Creative Arts, and Speed Typing, achieving <strong>Overall Level ${overallLvl}</strong> with <strong>${stu.xp} Total XP</strong> and <strong>⭐ ${stu.stars} Stars</strong>.
+            </p>
+
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-top:28px; padding-top:14px; border-top:2px dashed #cbd5e1; font-size:13px; font-weight:800; color:#475569;">
+              <div>📅 Date: ${dateStr}</div>
+              <div>🏆 Verified by Gyanova Kids Zone</div>
+              <div>✍️ Principal / Director</div>
+            </div>
+          </div>
+
+          <button class="btn-3d btn-blue" onclick="window.print()">🖨️ Print / Save Certificate as PDF</button>
+        </div>
+      `;
+    }
+
+    /* ============================================================================
+       STUDENT PROFILE, CHAMPIONS, HOMEWORK & SCHOOL SHOWCASE MODALS
        ============================================================================ */
     function renderStudentProfileModal() {
       const stu = getLoggedStudent();
@@ -3530,21 +4098,22 @@
         <div style="display:flex; flex-direction:column; gap:18px;">
           <div style="background:linear-gradient(135deg,#1e3a8a,#6d28d9); color:#fff; padding:22px; border-radius:26px; border:4px solid #fde047; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
             <div style="display:flex; align-items:center; gap:16px;">
-              <div style="font-size:56px; background:#fef08a; width:88px; height:88px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:4px solid #fff;">
+              <div style="font-size:54px; background:#fef08a; width:86px; height:86px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:4px solid #fff;">
                 ${stu.avatar}
               </div>
               <div>
+                <div style="font-size:12px; color:#fde047; font-weight:900;">${stu.equippedTitle}</div>
                 <div style="font-family:'Baloo 2',cursive; font-size:28px; font-weight:800;">${stu.name} (${stu.classGrade})</div>
-                <div style="font-size:18px; color:#fde047; font-weight:800;">⭐ ${stu.stars} Stars  |  ⚡ ${stu.xp} Total XP  |  🏆 Level ${overallLvl}</div>
-                <div style="font-size:12.5px; color:#bae6fd; margin-top:4px;">🔒 Account Protected by Your Secret 4-Digit PIN</div>
+                <div style="font-size:17px; color:#fde047; font-weight:800;">⭐ ${stu.stars} Stars  |  ⚡ ${stu.xp} Total XP  |  🏆 Level ${overallLvl}</div>
               </div>
             </div>
-            <button class="btn-3d btn-red" style="font-size:15px; padding:8px 18px;" onclick="logoutCurrentStudent()">
-              🔒 Lock & Switch Student
-            </button>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <button class="btn-3d btn-gold" style="font-size:14.5px; padding:8px 16px;" onclick="openGameModal('shop')">🛍️ Star Shop</button>
+              <button class="btn-3d btn-red" style="font-size:14.5px; padding:8px 16px;" onclick="logoutCurrentStudent()">🔒 Lock & Logout</button>
+            </div>
           </div>
 
-          <div style="font-weight:900; font-size:16px; color:#0f172a;">📊 My Unlimited Game Levels:</div>
+          <div style="font-weight:900; font-size:16px; color:#0f172a;">📊 My Unlimited Game Progress (${stu.classGrade}):</div>
           <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
             <div style="background:#fff; padding:14px; border-radius:18px; border:3px solid #ec4899;">🎨 <strong>Magic Canvas:</strong> Level ${stu.gameLevels.canvas}</div>
             <div style="background:#fff; padding:14px; border-radius:18px; border:3px solid #3b82f6;">🧮 <strong>Math Wizard:</strong> Level ${stu.gameLevels.math}</div>
@@ -3558,7 +4127,7 @@
     }
 
     function renderChampionsModal() {
-      document.getElementById('modalTitle').innerHTML = '🏆 GYANOVA HALL OF CHAMPIONS (REAL STUDENT XP)';
+      document.getElementById('modalTitle').innerHTML = '🏆 GYANOVA HALL OF CHAMPIONS (NURSERY TO CLASS 8)';
       const sorted = [...appState.players]
         .map(normalizeStudentObject)
         .sort((a, b) => (b.xp - a.xp) || (b.stars - a.stars));
@@ -3567,15 +4136,14 @@
       body.innerHTML = `
         <div style="display:flex; flex-direction:column; gap:16px;">
           <div style="background:linear-gradient(90deg,#1e1b4b,#312e81); color:#fff; padding:18px; border-radius:22px; border:3px solid #fde047;">
-            <div style="font-family:'Baloo 2',cursive; font-size:22px; color:#fde047;">🌟 Fair-Play Zero-XP Start Leaderboard</div>
-            <div style="font-size:14px; color:#cbd5e1; margin-top:2px;">
-              Every student starts at 0 XP and climbs the ranks strictly by solving puzzles, reading stories, and completing waves!
+            <div style="font-family:'Baloo 2',cursive; font-size:22px; color:#fde047;">🌟 Nursery to Class 8th Live XP Rankings</div>
+            <div style="font-size:13.5px; color:#cbd5e1; margin-top:2px;">
+              Every student starts at 0 XP and climbs the Leaderboard through real game waves!
             </div>
           </div>
-
           ${sorted.length === 0 ? `
             <div style="background:#fff; padding:26px; border-radius:22px; text-align:center; font-weight:800; color:#475569;">
-              No students registered yet! Click below to create the first student account starting at 0 XP:<br/><br/>
+              No students registered yet!<br/><br/>
               <button class="btn-3d btn-green" onclick="openAuthModal('register')">➕ Register First Student</button>
             </div>
           ` : `
@@ -3587,12 +4155,10 @@
                     <span style="font-size:34px;">${p.avatar}</span>
                     <div>
                       <div style="font-size:17px; font-weight:900;">${p.name} <span style="font-size:12.5px; color:#64748b;">(${p.classGrade})</span></div>
-                      <div style="font-size:12.5px; color:#059669; font-weight:800;">Level ${Math.floor(p.xp / 100) + 1} • Wave ${p.questWave} • ⭐ ${p.stars} Stars</div>
+                      <div style="font-size:12px; color:#059669; font-weight:800;">${p.equippedTitle} • Level ${Math.floor(p.xp / 100) + 1} • ⭐ ${p.stars} Stars</div>
                     </div>
                   </div>
-                  <div style="font-family:'Baloo 2',cursive; font-size:22px; font-weight:800; color:#d97706;">
-                    ⚡ ${p.xp} XP
-                  </div>
+                  <div style="font-family:'Baloo 2',cursive; font-size:22px; font-weight:800; color:#d97706;">⚡ ${p.xp} XP</div>
                 </div>
               `).join('')}
             </div>
@@ -3602,18 +4168,18 @@
     }
 
     function renderHomeworkNoticesModal() {
-      document.getElementById('modalTitle').innerHTML = '📋 DAILY HOMEWORK & OFFICIAL SCHOOL NOTICES';
+      document.getElementById('modalTitle').innerHTML = '📋 NURSERY TO CLASS 8TH HOMEWORK & NOTICES';
       const body = document.getElementById('modalBody');
       body.innerHTML = `
         <div style="display:flex; flex-direction:column; gap:16px;">
-          <div style="background:#fef3c7; border:3px solid #f59e0b; padding:16px 20px; border-radius:20px; color:#92400e; font-weight:800; font-size:16px;">
-            ${appState.schoolNotice || '📢 Welcome to Gyanova Heights School Smart Learning Portal!'}
+          <div style="background:#fef3c7; border:3px solid #f59e0b; padding:16px 20px; border-radius:20px; color:#92400e; font-weight:800; font-size:15.5px;">
+            ${appState.schoolNotice}
           </div>
           <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:14px;">
             ${(appState.homeworkList || []).map(hw => `
-              <div style="background:#fff; padding:18px; border-radius:20px; border:3px solid #38bdf8; box-shadow:0 6px 14px rgba(0,0,0,0.06);">
-                <div style="font-family:'Baloo 2',cursive; font-size:20px; color:#0369a1;">🎒 ${hw.grade}</div>
-                <p style="font-size:14.5px; font-weight:700; color:#334155; margin-top:6px; line-height:1.45;">${hw.task}</p>
+              <div style="background:#fff; padding:18px; border-radius:20px; border:3px solid #38bdf8;">
+                <div style="font-family:'Baloo 2',cursive; font-size:19px; color:#0369a1;">🎒 ${hw.grade}</div>
+                <p style="font-size:14px; font-weight:700; color:#334155; margin-top:6px; line-height:1.45;">${hw.task}</p>
               </div>
             `).join('')}
           </div>
@@ -3622,26 +4188,30 @@
     }
 
     function renderAboutSchoolModal() {
-      document.getElementById('modalTitle').innerHTML = '🏫 GYANOVA HEIGHTS SCHOOL — Campus Showcase';
+      document.getElementById('modalTitle').innerHTML = '🏫 GYANOVA HEIGHTS SCHOOL (NURSERY TO CLASS 8TH)';
       document.getElementById('modalBody').innerHTML = `
         <div style="display:flex; flex-direction:column; gap:18px;">
           <div style="background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 100%); color:#fff; padding:22px; border-radius:26px; border:4px solid #38bdf8;">
             <div style="background:#f59e0b; color:#fff; display:inline-block; padding:3px 12px; border-radius:999px; font-size:11.5px; font-weight:900; margin-bottom:8px;">
-              NURSERY TO CLASS 4 • NEXT-GEN FOUNDATIONAL SCHOOL
+              NURSERY TO CLASS 8TH • NEXT-GEN DIGITAL CAMPUS
             </div>
             <h2 style="font-family:'Baloo 2',cursive; font-size:30px; color:#fde047;">GYANOVA HEIGHTS SCHOOL</h2>
-            <p style="font-size:15px; color:#e2e8f0; margin-top:6px; line-height:1.5;">
-              Blending strong moral values, foundational STEM & mental math, spoken English phonics, and interactive digital creativity for young scholars.
+            <p style="font-size:14.5px; color:#e2e8f0; margin-top:6px; line-height:1.5;">
+              Complete foundational to middle-school excellence from Nursery to Class 8th — integrating STEM, Algebra, Coding, Phonics, Moral Leadership, and Interactive Gamified Learning.
             </p>
           </div>
           <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:14px;">
-            <div style="background:#fff; padding:16px; border-radius:20px; border:3px solid #38bdf8;">
-              <h3 style="font-family:'Baloo 2',cursive; font-size:20px; color:#0369a1;">🌱 Nursery, LKG & UKG</h3>
-              <p style="font-size:13.5px; color:#475569; font-weight:700; margin-top:4px;">Interactive Phonics, Symmetry Art Studio, Moral Picture Stories, and Number Counting.</p>
-            </div>
             <div style="background:#fff; padding:16px; border-radius:20px; border:3px solid #22c55e;">
-              <h3 style="font-family:'Baloo 2',cursive; font-size:20px; color:#15803d;">🚀 Class 1 to Class 4</h3>
-              <p style="font-size:13.5px; color:#475569; font-weight:700; margin-top:4px;">Unlimited Mental Math Waves, Vocabulary Building, Logic Matrices, and Speed Touch-Typing.</p>
+              <h3 style="font-family:'Baloo 2',cursive; font-size:19px; color:#15803d;">🌱 Junior Wing (Nursery – Class 2)</h3>
+              <p style="font-size:13.5px; color:#475569; font-weight:700; margin-top:4px;">Phonics Word Builder, Counting & Addition, Symmetry Art, and Illustrated Moral Stories.</p>
+            </div>
+            <div style="background:#fff; padding:16px; border-radius:20px; border:3px solid #38bdf8;">
+              <h3 style="font-family:'Baloo 2',cursive; font-size:19px; color:#0369a1;">🚀 Middle Wing (Class 3 – Class 5)</h3>
+              <p style="font-size:13.5px; color:#475569; font-weight:700; margin-top:4px;">Multiplication/Division, BODMAS, Geometry Perimeter, 3×3 Sliding Puzzles, and Live Vocabulary.</p>
+            </div>
+            <div style="background:#fff; padding:16px; border-radius:20px; border:3px solid #a855f7;">
+              <h3 style="font-family:'Baloo 2',cursive; font-size:19px; color:#6d28d9;">👑 Senior Wing (Class 6 – Class 8)</h3>
+              <p style="font-size:13.5px; color:#475569; font-weight:700; margin-top:4px;">Linear Algebra Equations, Percentages, Exponents, Science/Computer GK Trivia, and Falling Meteor Typing.</p>
             </div>
           </div>
         </div>
@@ -3651,9 +4221,9 @@
     function inspectTrophy(tKey) {
       playTone('click');
       const descriptions = {
-        math: '🏆 Maths Boss Trophy: Reach Level 3+ in Math Wizard to unlock!',
+        math: '🏆 Maths Boss Trophy: Reach Level 3+ in Math Wizard!',
         thinker: '🥇 Quick Thinker Medal: Reach Level 3+ in Brain Teasers or Typing Champ!',
-        artist: '🎖️ Artist Star Badge: Complete Level 2+ in Magic Canvas Studio!',
+        artist: '🎖️ Artist Star Badge: Complete Level 2+ in Magic Canvas & Pixel Studio!',
         legend: '👑 Gyanova Legend Crown: Earn 300+ Total XP across all school games!'
       };
       showTrophyToast(descriptions[tKey] || '🌟 Keep playing to unlock all trophies!');
