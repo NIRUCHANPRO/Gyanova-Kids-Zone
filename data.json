@@ -1,12 +1,47 @@
 {
-  "lastUpdated": "2026-11-16",
+  "lastUpdated": "2026-11-16T11:09:30.770Z",
   "questsCompleted": 2,
   "questsTotal": 3,
   "players": [
-    { "id": "jayushi", "name": "Jayushi", "classGrade": "Class 4", "avatar": "👧", "stars": 450, "points": 4528 },
-    { "id": "vihan", "name": "Vihan", "classGrade": "Class 3", "avatar": "👦", "stars": 450, "points": 4538 },
-    { "id": "niti", "name": "Niti", "classGrade": "Class 2", "avatar": "🧒", "stars": 350, "points": 3838 },
-    { "id": "jauma", "name": "Jauma", "classGrade": "Class 1", "avatar": "🧑", "stars": 320, "points": 3864 },
-    { "id": "sam", "name": "Sam", "classGrade": "Class 3", "avatar": "🦁", "stars": 450, "points": 4490 }
+    {
+      "id": "jayushi",
+      "name": "Jayushi",
+      "classGrade": "Class 4",
+      "avatar": "👧",
+      "stars": 450,
+      "points": 4528
+    },
+    {
+      "id": "vihan",
+      "name": "Vihan",
+      "classGrade": "Class 3",
+      "avatar": "👦",
+      "stars": 450,
+      "points": 4538
+    },
+    {
+      "id": "niti",
+      "name": "Niti",
+      "classGrade": "Class 2",
+      "avatar": "🧒",
+      "stars": 350,
+      "points": 3838
+    },
+    {
+      "id": "jauma",
+      "name": "Jauma",
+      "classGrade": "Class 1",
+      "avatar": "🧑",
+      "stars": 320,
+      "points": 3864
+    },
+    {
+      "id": "sam",
+      "name": "Sam",
+      "classGrade": "Class 3",
+      "avatar": "🦁",
+      "stars": 450,
+      "points": 4490
+    }
   ]
 }
